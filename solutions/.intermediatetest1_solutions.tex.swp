@@ -95,7 +95,7 @@ Now $a+b+c \geq 0$, since $a,b,c$ are positive real numbers. $a^2+b^2+c^2-ab-bc-
         \includegraphics[width=0.4\textwidth]{seniortest1_q1.PNG}
     \end{figure}
     
-    % QUESTION 5
+    % QUESTION 2
     \item \textit{EGMO 2013, Problem 2} \\
     The solution naturally divides into three different parts: we first obtain some bounds on $m$. We then describe the structure of possible dissections, and finally, we deal with the few remaining cases.
     
