@@ -21,7 +21,11 @@
 \end{align*}
 }
 
+The second equation can be rewritten as $3\lfloor{y}\rfloor +5\lfloor{z}\rfloor = 15.1 +\{x\}$. Now the left-hand side is an integer, and so is the right-hand side; since $0 \leq \{x\} < 1$, this is only possible if $\{x\} = 0.9$. Thus we have that $3\lfloor{y}\rfloor +5\lfloor{z}\rfloor = 16$. By investigating all nonnegative possible values for $\lfloor{y}\rfloor$ and $\lfloor{z}\rfloor$, we see that the only possibility is $\lfloor{y}\rfloor = 2$ and $\lfloor{z}\rfloor = 2$.
 
+Adding the first and third equations, we get that $3\lfloor{x}\rfloor +2\{z\} = 21.2$, or $\lfloor{x}\rfloor = (21.2-2\{z\})/3$; so $21.2-2\{z\}$ is an integer divisible by 3, but is between $19.2$ and $21.2$; hence it is equal to $21$ and so $\{z\} = 0.1$, with $\lfloor{x}\rfloor = 7$. Also, plugging $\{z\} = 0.1$ in to the third equation gives $\{y\} = 0.8$.
+
+Thus $x = \lfloor{x}\rfloor +\{x\} = 7.9$, $y = \lfloor{y}\rfloor +\{y\} = 2.8$ and $z = \lfloor{z}\rfloor +\{z\} = 2.1$.
 
 \item[3.] \emph{Let $ABC$ be an acute-angled triangle with $\angle BAC = 75^\circ$. Let $P$ the midpoint of the side $BC$, and let $M$ and $N$ be the feet of the altitudes from vertices $B$ and $C$ respectively. Determine the angle $\angle MPN$.}
 
