@@ -75,7 +75,15 @@
     % QUESTION 1
     \item[1.] Letting $x = y = 0$ yields $f(0) = 0$. For $y = 0$, we obtain $f(x^2) = x^2$ which implies $f(x) = x$ for all $x \geq 0$. For $x = 0$, we obtain $f(-y^2) = -f(y^2) = -y^2$, which implies $f(x) = x$ for all $x \leq 0$. Hence $f(x) = x$ for all $x \in \mathbb{R}$ which can easily be checked to be a solution.
     
-    \item[2.] 
+    
+    \item[2.] \textbf{Base case, $n =1$:} The snake can either face west or east, and hence can be lined up in 2 ways.
+    
+    \textbf{Inductive hypothesis, $n=k$:} Assume that for $n=k$ snakes, they can be lined up in $2^k$ ways.
+    
+    \textbf{Inductive step, $n=k+1$:} Since all snakes have distinct tail lengths, we can find and remove the tallest snake from the $k+1$ snakes. The other $k$ snakes can be lined up in $2^k$ ways, using our inductive hypothesis. The remaining snake can only be inserted on the far sides of any line of the $k$ snakes, since if it is inserted between any two snakes it must be taller than both of them, and hence no matter which way it faces it would have a snake to eat. Similarly, on either the west or the east edge, the snake must face away from the other snakes, else again it would see a shorter snake. So there are 2 ways to add the last snake, and thus the total arrangements of snakes numbers $2^{k+1}$.
+    
+    Thus by induction, $n$ snakes can be lined up in $2^n$ ways, so for 2017 snakes there are $2^{2017}$ arrangements.
+    
     
     % EGMO 2012 Q1
     \item[3.] Let $l_C$ be the tangent at $C$ to the circumcircle of $\triangle ABC$. As $CO \perp l_C$, the lines $DE$ and $l_C$ are parallel. Now we find that
@@ -87,13 +95,15 @@
         \includegraphics[width=0.3\textwidth]{seniortest2_q3.PNG}
     \end{figure}
     
+    
     \item[4.] Let $P(x) = x^3 + \alpha x^2 + \beta x + \gamma$ where $\alpha, \beta, \gamma \in \mathbb{R}$. The condition that $P(1) = 91$ then becomes $1 + \alpha + \beta + \gamma = 91$ and $P(-1) = -121$ becomes $-1 + \alpha - \beta + \gamma = -121$. Adding the two equations yields $2 \alpha + 2 \gamma = -30$, hence $\alpha + \gamma = -15$.
     
     By Vieta's formulae, we have: $\alpha = -(a+b+c), \beta = ab + bc + ca$ and $\gamma = -abc$. Hence $abc + a + b + c = - \alpha - \gamma = 15$ and $ab+bc+ca = \beta = (1 + \alpha + \beta + \gamma) - (\alpha + \gamma) - 1 = 91 + 15 - 1 = 105$. Thus
     \[  \frac{ab+bc+ca}{abc+a+b+c} = \frac{105}{15} = 7  \]
     which is, indeed, the \textit{only} value that the fraction can attain.
     
-    % EGMOE 2012 Q5
+    
+    % EGMO 2012 Q5
     \item[5.] Rearranging the equation, $2qn(p + 1) = (n + 2)(2pq + p + q + 1)$. The left hand side is even, so either $n + 2$ or $p + q + 1$ is even, so either $p = $2 or $q = 2$ since $p$ and $q$ are prime, or $n$ is even.
     
     If $p = 2$, $6qn = (n + 2)(5q + 3)$, so $(q - 3)(n - 10) = 36$. Considering the divisors of $36$ for which $q$ is prime, we find the possible solutions $(p, q, n)$ in this case are $(2, 5, 28)$ and $(2, 7, 19)$ (both of which satisfy the equation).
@@ -110,13 +120,6 @@
     
     Thus the possible values of $q - p$ are $2, 3$ and $5$.
 
-
-
-	
 \end{enumerate}
 \end{document}
-
-
-
-
 
