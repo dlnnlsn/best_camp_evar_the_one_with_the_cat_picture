@@ -7,6 +7,7 @@
  \usepackage{amsthm}
  \usepackage{graphicx}   % need for figures
  \usepackage{verbatim}   % useful for program listings
+ \usepackage{fancyvrb}   % boxes verbatims
  %\usepackage{subfig}  % use for side-by-side figures
  %\usepackage{wrapfig}
  %\usepackage{listings}	 % creates code blocks
@@ -78,6 +79,8 @@
     
     \item[2.] \textbf{Base case, $n =1$:} The snake can either face west or east, and hence can be lined up in 2 ways.
     
+    Clearly the snakes can always be lined up so that no snake can see another snake with a shorter tail length, since for example the snake trader can always line them up facing west in descending order. The number of suitable arrangements for $n$ snakes is $2^n$, which we prove using induction.
+    
     \textbf{Inductive hypothesis, $n=k$:} Assume that for $n=k$ snakes, they can be lined up in $2^k$ ways.
     
     \textbf{Inductive step, $n=k+1$:} Since all snakes have distinct tail lengths, we can find and remove the tallest snake from the $k+1$ snakes. The other $k$ snakes can be lined up in $2^k$ ways, using our inductive hypothesis. The remaining snake can only be inserted on the far sides of any line of the $k$ snakes, since if it is inserted between any two snakes it must be taller than both of them, and hence no matter which way it faces it would have a snake to eat. Similarly, on either the west or the east edge, the snake must face away from the other snakes, else again it would see a shorter snake. So there are 2 ways to add the last snake, and thus the total arrangements of snakes numbers $2^{k+1}$.
@@ -121,5 +124,28 @@
     Thus the possible values of $q - p$ are $2, 3$ and $5$.
 
 \end{enumerate}
+
+
+\centering
+\begin{BVerbatim}
+       ,__         __,
+        | \,-"""-,/ |
+        \.'_     _'./
+        / <o>   <o>  \
+      >|      Y      |<
+       \   \  :  /   /
+ jgs    '.  '-^-'  .'
+         /`-------'\
+        /    >o<    \
+        |           |
+      .-|           |-.
+     |  |  |     |  |  |
+     |  |  |     |  |  |
+      \ |  |     |  | /
+       )|  \     /  |(`.
+     .' /\__)._.(__/_,) )
+     ""`     (_______,.'
+\end{BVerbatim}
+
 \end{document}
 
