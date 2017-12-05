@@ -168,8 +168,32 @@ Finally, we handle the cases $m = 11$ and $m = 13$, which indeed are solutions. 
     Hence a polynomial of the form $P(n) = (n^5 + a)/11$ has the desired property if and only if $a \equiv \pm 1$ (mod 11). This completes the proof.
 	
 	% QUESTION 5
-	\item[5.] 
+	\item[5.] \textbf{Solution 1:} \\
+	% Official solution from Croatian 2017, 1.4
+	Denote $\alpha = \angle BAC, \beta = \angle CBA$ and $\gamma = \angle ACB$, and let $O$ be the circumcentre of triangle $ABC$.
+	
+	% DIAGRAM
+	
+	Point $P$ is on the circle circumscribed to triangle $ACC'$, so $\angle APC = \angle AC'C$ since they are subtended by $\overline{AC}$. Because of the reflection, we have $\angle AC'C = 90^\circ - \angle BAC' = 90^\circ - \alpha$.
+	
+	Analogously, by observing the circle circumscribed to triangle $ABB'$, we can conclude
+	$$ \angle APB = \angle ABB' = 90^\circ - \alpha $$
+	Therefore, $\angle CPB = \angle APC + \angle APB = 180^\circ - 2 \alpha$.
+	
+	Since $AC'PC$ is a cyclic quadrilateral, we have
+	$$ \angle CPC' = 180^\circ - \angle CAB - \angle BAC' = 180^\circ - 2 \alpha $$
+	
+	Therefore, $\angle CPB = \angle CPC'$, so points $P$, $B$, and $C'$ are collinear.
+	
+	Let $A'$ be the point diametrically opposite point $A$ on the circle circumscribed to triangle $ACC'$. Since $AB$ is the bisector of segment $\overline{CC'}$ point $A'$ lies on line $AB$. Therefore, $\angle A'BP = \angle ABC' = \beta$. By Thales' theorem we have $\angle APA' = 90^\circ$, so
+	$$ \angle BPA' = 90^\circ - \angle APB = \alpha $$
+	
+	Therefore, $\angle AA'P = 180^\circ - \alpha - \beta = \gamma$ and $\angle A'AP = 90^\circ - \angle AA'P = 90^\circ - \gamma$, i.e. $\angle BAP = 90^\circ - \gamma$.
+	
+	On the other hand, $\angle BOA = 2\gamma$ and $\angle BAO = 90^\circ - \gamma$, so we conclude that $A$, $O$, and $P$ lie on the same line. This completes the proof. \\
 
+% Taariq's solution
+\textbf{Solution 2:} \\
     Let $O_1$ and $O_2$ be the centres of circle $CAC^\prime$ and $BAB^\prime$
     respectively. Since $C^\prime$ is the reflection of $C$ about $AB$, we have
     that the perpendicular bisectors of $AC$ and $AC^\prime$ meet on $AB$. It
