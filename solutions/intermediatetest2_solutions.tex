@@ -9,12 +9,14 @@
 
 \begin{enumerate}
 
+
 \item[1.] \emph{Prove that there are an infinite number of solutions to $x^3 + y^3 = z^2$ over the positive integers.}
 
 For any natural number $a$, we have that
 \[
     (2a^2)^3 + (2a^2)^3 = (4a^3)^2.
 \]
+
 
 \item[2.] \emph{Determine all triples $(x,y,z)$ of positive real numbers that satisfy
 \begin{align*}
@@ -30,6 +32,7 @@ Adding the first and third equations, we get that $3\lfloor{x}\rfloor +2\{z\} = 
 
 Thus $x = \lfloor{x}\rfloor +\{x\} = 7.9$, $y = \lfloor{y}\rfloor +\{y\} = 2.8$ and $z = \lfloor{z}\rfloor +\{z\} = 2.1$.
 
+
 \item[3.] \emph{Let $ABC$ be an acute-angled triangle with $\angle BAC = 75^\circ$. Let $P$ the midpoint of the side $BC$, and let $M$ and $N$ be the feet of the altitudes from vertices $B$ and $C$ respectively. Determine the angle $\angle MPN$.}
 
 Since $\angle BAC = 75^\circ$, we have that $\angle MAB = 15^\circ$. Note that
@@ -37,7 +40,9 @@ $MNBC$ is a cyclic quad with center $P$. The chord $MN$ subtends an angle of
 $15^\circ$ at $B$, and hence subtends an angle of $2 \times 15^\circ = 30^\circ$
 at $P$.
 
+
 \item[4.] \emph{A snake trader has 2017 ravenous snakes with different tail lengths which he wants to place in a line from west to east, with each snake facing either east or west. The snakes are well-trained and will stay still once placed, but each will eat any snake it can see that has a shorter tail than it! (Each snake can see all the snakes in the direction in which it is facing.) Can the snakes be lined up such that no snake can see another snake with a shorter tail length? If so, how many ways are there to do this?}
+
 
 
 
@@ -45,7 +50,7 @@ at $P$.
 	\[f(x^2-y^2) = x^2 - f(y^2)\]
 for all $x,y \in \mathbb{R}$.}
 
-
+Letting $x = y = 0$ yields $f(0) = 0$. For $y = 0$, we obtain $f(x^2) = x^2$ which implies $f(x) = x$ for all $x \geq 0$. For $x = 0$, we obtain $f(-y^2) = -f(y^2) = -y^2$, which implies $f(x) = x$ for all $x \leq 0$. Hence $f(x) = x$ for all $x \in \mathbb{R}$ which can easily be checked to be a solution.
 
 \end{enumerate}
 
