@@ -64,7 +64,15 @@
 \begin{enumerate}
     
     % QUESTION 1
-    \item[1.] 
+    \item[1.] Letting $x=y=0$, we obtain $f(0) = 2f(0)$ and so $f(0)=0$. Then letting $x=y$, we find: 
+    \begin{equation*}
+    	f(0) = 2f(x)-2x^2 \\ \implies f(x) = x^2
+    \end{equation*}
+    $\forall x \in \mathbb{R}$. Now all that remains is to check that this is indeed a solution. Substituting $f(x)=x^2$ into the original equation gives:
+    \begin{equation*}
+    	f(x)+f(y)-2xy = x^2+y^2-2xy = (x-y)^2 = f(x-y)
+    \end{equation*}
+    which holds for all $x,y \in \mathbb{R}$, and so $f(x) = x^2$ is a solution (the only solution).
     
     
     % QUESTION 2
@@ -88,8 +96,8 @@
 
     This must be equal to $9$, and so we can see that $n$ must either be of the
     form $n = p^8$ for some prime number $p$, or of the form $n = p^2 q^2$ for
-    some prime numbers $p$ and $q$. It remains to show that both of these cases
-    work.
+    some distinct prime numbers $p$ and $q$. It remains to show that both of
+    these cases work.
 
     For $n = p^8$, we have the following arrangement of its factors:
     \[
