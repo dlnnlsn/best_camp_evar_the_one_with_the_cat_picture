@@ -94,9 +94,10 @@
     
     Hence, only $p=2$ satisfies the desired property.
     
+
     % QUESTION 5
     \item[5.]  % AoPS, Inequalities Marathon, Problem 25
-    Note that we have $a^2 + b^2 + \sqrt{c} \geq 2ab + \sqrt{c} = \frac{2}{c} + \sqrt{c}$. Hence, we have
+    \emph{Solution 1:} Note that we have $a^2 + b^2 + \sqrt{c} \geq 2ab + \sqrt{c} = \frac{2}{c} + \sqrt{c}$. Hence, we have
     $$ \sum_\textrm{cyc} \frac {ab}{a^2 + b^2 + \sqrt {c}} \leq \sum_\textrm{cyc} \frac{\frac{1}{c}}{\frac{2}{c} + \sqrt{c}} = \sum_\textrm{cyc} \frac{1}{2 + c\sqrt{c}} $$
     Reducing to a common denominator, we have that:
     \begin{align}
@@ -109,8 +110,14 @@
     which proves that:
     $$ \sum_\textrm{cyc} \frac{1}{2 + c\sqrt{c}} \leq 1 $$
     This completes the proof.
-
-	
+    
+	  \emph{Solution 2:} As before, we begin with $a^2 + b^2 + \sqrt{c} \geq 2ab + \sqrt{c} = 2ab + \sqrt{abc^2} = \sqrt{ab}\left(2\sqrt{ab}+c\right)$. Hence, we have
+	    \[ \sum_\textrm{cyc} \frac {ab}{a^2 + b^2 + \sqrt {c}} \leq \sum_\textrm{cyc} \frac{\sqrt{ab}}{2\sqrt{ab}+c} = \frac{1}{2} - \frac{c}{4\sqrt{ab}+2c} \]
+	  and so it remains to show that
+	    \[ \sum_\textrm{cyc} \frac{c}{2\sqrt{ab}+c} \geq 1. \]
+	  But by Cauchy's Inequality in Engel form, the left-hand side is
+	    \[ \sum_\textrm{cyc} \frac{(\sqrt{c})^2}{2\sqrt{ab}+c} \geq \frac{\left(\sqrt{a}+\sqrt{b}+\sqrt{c}\right)^2}{a+b+c+2\sqrt{ab}+2\sqrt{bc}+2\sqrt{ca}} = 1, \]
+	  and so the inequality is proved.
 \end{enumerate}
 \end{document}
 
