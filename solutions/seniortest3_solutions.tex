@@ -1,0 +1,120 @@
+\documentclass[a4paper, 12pt]{article}
+%\documentclass{book}
+
+% Important Packages:
+ \usepackage{amsmath}    % need for subequations
+ \usepackage{amsfonts}
+ \usepackage{amsthm}
+ \usepackage{graphicx}   % need for figures
+ \usepackage{verbatim}   % useful for program listings
+ %\usepackage{subfig}  % use for side-by-side figures
+ %\usepackage{wrapfig}
+ %\usepackage{listings}	 % creates code blocks
+ %\usepackage[colorlinks=true]{hyperref}   % use for hypertext links, including
+                     % those to external documents and URLs
+ %\usepackage{multirow}
+ %\usepackage{tikz}
+ %\usepackage{enumerate}
+ %\usetikzlibrary{decorations.pathreplacing,decorations.pathmorphing}
+ %\usetikzlibrary{calc}
+ %\usepackage[colorinlistoftodos]{todonotes}
+ 
+ % Useful macros 
+ \def\tcb#1{\color{blue}{#1}}
+ \def\tcr#1{\color{red}{#1}}	
+ \def\tcg#1{\color{green}{#1}}
+ \def\be{\begin{eqnarray}}	 	\def\ee{\end{eqnarray}}
+ \def\bea{\begin{eqnarray}}	 	\def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}	\def\eean{\end{eqnarray*}}
+ 
+ \def\D{\displaystyle}
+ \def\T{\textstyle}
+ \def\l{\left}
+ \def\r{\right}
+ \def\nf{n_{\!f}} % quark flavours
+ \def\pa{\partial}
+ \def\eg{e.\,g.}
+ \def\ie{i.\,e.}
+
+ \def\be{\begin{equation}}
+ \def\ee{\end{equation}}
+ \def\bea{\begin{eqnarray}}
+ \def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}
+ \def\eean{\end{eqnarray*}}
+ \def\gsim{\mathrel{\rlap{\lower0.2em\hbox{$\sim$}}\raise0.2em\hbox{$>$}}}
+ \def\ksim{\mathrel{\rlap{\lower0.2em\hbox{$\sim$}}\raise0.2em\hbox{$<$}}}
+ \def\kg{\mathrel{\rlap{\lower0.25em\hbox{$>$}}\raise0.25em\hbox{$<$}}}
+ 
+ \def\AA{${\buildrel_{\circ} \over {\mathrm{A}}}$}
+ \def\bm#1{\mbox{\boldmath$#1$}}
+ \newcommand{\eq}[1]{(\ref{#1})} 
+ \def\pd{\partial}
+ \def\d{\textrm{d}} 
+ \def\T{\textstyle}
+ \def\eg{e.\,g.}	% exempli gratia (for the sake of example)
+ \def\ie{i.\,e.}	% id est (that is)
+
+
+ % Page configuration:
+ \topmargin -2.0cm
+ \oddsidemargin -0.85cm
+ \evensidemargin -0.85cm
+ \textwidth 18cm
+ \textheight 24cm
+ 
+\begin{document}
+\begin{center}
+\textbf{Stellenbosch Camp December 2017 \\ Senior Test 3} \\
+\textbf{Solutions}
+\end{center}
+
+\begin{enumerate}
+    % EGMO 2013 solutions: https://www.egmo.org/egmos/egmo2/solutions.pdf
+
+    % QUESTION 1
+    \item[1.] 
+    
+    % QUESTION 2
+    \item[2.] 
+    
+    % QUESTION 3
+    \item[3.] 
+    
+    
+    % QUESTION 4
+    \item[4.] Note that if $p=2$ then the given fraction yields 4, which is indeed a perfect square. We now assume $p > 2$. By Bertrand's postulate, there exists a prime $q$, such that $\frac{p-1}{2} < q \leq p-1$. We now consider writing the denominator as a single fraction, where:
+    %$$ 1+\frac{1}{2}+\dots+\frac{1}{p-1} = \frac{M}{\textrm{lcm}(1, 2, \dots, p-1)} $$
+    \begin{equation} \label{eqn41}
+        1+\frac{1}{2}+\dots+\frac{1}{p-1} = \frac{M}{1 \cdot 2 \cdot 3 \cdot \dots (p-1)}
+    \end{equation}
+    where
+    $$ M = \sum_{i=1}^{p-1}  \prod_{k=1, k \neq i}^{p-1} k $$
+    Noting that $q$ divides all terms in $M$ except for one, we have that $q \not | M$. Also $q$ divides the denominator of (\ref{eqn41}) exactly once. Hence, the exponent of $q$ in the original fraction is 1, which proves it cannot be a perfect square of a \textit{rational} number if $p>2$.
+    
+    Hence, only $p=2$ satisfies the desired property.
+    
+    % QUESTION 5
+    \item[5.]  % AoPS, Inequalities Marathon, Problem 25
+    Note that we have $a^2 + b^2 + \sqrt{c} \geq 2ab + \sqrt{c} = \frac{2}{c} + \sqrt{c}$. Hence, we have
+    $$ \sum_\textrm{cyc} \frac {ab}{a^2 + b^2 + \sqrt {c}} \leq \sum_\textrm{cyc} \frac{\frac{1}{c}}{\frac{2}{c} + \sqrt{c}} = \sum_\textrm{cyc} \frac{1}{2 + c\sqrt{c}} $$
+    Reducing to a common denominator, we have that:
+    \begin{align}
+        \sum_\textrm{cyc} \frac{1}{2 + c\sqrt{c}} &= \frac{(2 + b \sqrt{b})(2 + c \sqrt{c}) + (2 + c \sqrt{c})(2 + a \sqrt{a}) + (2 + a \sqrt{a})(2 + b \sqrt{b})}{(2 + a \sqrt{a})(2 + b \sqrt{b})(2 + c \sqrt{c})} \nonumber \\
+        &= \frac{4 \cdot 3 + (ab\sqrt{ab} + bc\sqrt{bc} + ca\sqrt{ca}) + 4(a\sqrt{a} + b\sqrt{b} + c\sqrt{c})}{1 + 2(ab\sqrt{ab} + bc\sqrt{bc} + ca\sqrt{ca}) + 4(a\sqrt{a} + b\sqrt{b} + c\sqrt{c}) + 8} \label{eqn51}
+    \end{align} 
+    
+    It now remains to prove that (\ref{eqn51}) $ \leq 1$, where we now use AM-GM:
+    $$  ab\sqrt {ab} + bc\sqrt {bc} + ca\sqrt {ca} \geq 3 \sqrt [3]{a^2b^2c^2\sqrt {a^2b^2c^2}} = 3 $$
+    which proves that:
+    $$ \sum_\textrm{cyc} \frac{1}{2 + c\sqrt{c}} \leq 1 $$
+    This completes the proof.
+
+	
+\end{enumerate}
+\end{document}
+
+
+
+
+
