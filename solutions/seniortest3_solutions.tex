@@ -73,7 +73,46 @@
     % EGMO 2013 solutions: https://www.egmo.org/egmos/egmo2/solutions.pdf
 
     % QUESTION 1
-    \item[1.] 
+    \item[1.] Let
+    \[
+        n = \prod_{i=1}^{k} p_i^{a_i}
+    \]
+    be the prime decomposition of $n$. Then the number of divisors of $n$ is
+    equal to
+    \[
+        (a_1 + 1)(a_2 + 1)(a_3 + 1) \cdots (a_k + 1).
+    \]
+
+    This must be equal to $9$, and so we can see that $n$ must either be of the
+    form $n = p^8$ for some prime number $p$, or of the form $n = p^2 q^2$ for
+    some prime numbers $p$ and $q$. It remains to show that both of these cases
+    work.
+
+    For $n = p^8$, we have the following arrangement of its factors:
+    \[
+        \begin{array}{|c|c|c|}
+            \hline
+            p^3 & p^8 & p \\
+            \hline
+            p^2 & p^4 & p^6 \\
+            \hline
+            p^7 & 1 & p^5 \\
+            \hline
+        \end{array}
+    \]
+
+    For $n = p^2 q^2$, we have the following arrangement of its factors:
+    \[
+        \begin{array}{|c|c|c|}
+            \hline
+            p^2 q & q^2 & p \\
+            \hline
+            1 & p q & p^2 q^2 \\
+            \hline
+            pq^2 & p^2 & q \\
+            \hline
+        \end{array}
+    \]
     
     % QUESTION 2
     \item[2.] 
