@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{article}
+
+% Important Packages:
+ \usepackage{amsmath}    % need for subequations
+ \usepackage{amsfonts}
+ \usepackage{amsthm}
+ \usepackage{graphicx}   % need for figures
+ \usepackage{verbatim}   % useful for program listings
+ %\usepackage{enumerate}
+ \usepackage[cm]{fullpage}
+ 
+ % Useful macros 
+ \def\tcb#1{\color{blue}{#1}}
+ \def\tcr#1{\color{red}{#1}}	
+ \def\tcg#1{\color{green}{#1}}
+ \def\be{\begin{eqnarray}}	 	\def\ee{\end{eqnarray}}
+ \def\bea{\begin{eqnarray}}	 	\def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}	\def\eean{\end{eqnarray*}}
+ 
+ \def\D{\displaystyle}
+ \def\T{\textstyle}
+ \def\l{\left}
+ \def\r{\right}
+ \def\nf{n_{\!f}} % quark flavours
+ \def\pa{\partial}
+ \def\eg{e.\,g.}
+ \def\ie{i.\,e.}
+
+ \def\be{\begin{equation}}
+ \def\ee{\end{equation}}
+ \def\bea{\begin{eqnarray}}
+ \def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}
+ \def\eean{\end{eqnarray*}}
+ \def\gsim{\mathrel{\rlap{\lower0.2em\hbox{$\sim$}}\raise0.2em\hbox{$>$}}}
+ \def\ksim{\mathrel{\rlap{\lower0.2em\hbox{$\sim$}}\raise0.2em\hbox{$<$}}}
+ \def\kg{\mathrel{\rlap{\lower0.25em\hbox{$>$}}\raise0.25em\hbox{$<$}}}
+ 
+ \def\AA{${\buildrel_{\circ} \over {\mathrm{A}}}$}
+ \def\bm#1{\mbox{\boldmath$#1$}}
+ \newcommand{\eq}[1]{(\ref{#1})} 
+ \def\pd{\partial}
+ \def\d{\textrm{d}} 
+ \def\T{\textstyle}
+ \def\eg{e.\,g.}	% exempli gratia (for the sake of example)
+ \def\ie{i.\,e.}	% id est (that is)
+
+
+\begin{document}
+
+\begin{center}
+\textbf{Stellenbosch Camp December 2017 \\ Intermediate Test 4} \\
+\textbf{Solutions}
+\end{center}
+
+
+\begin{enumerate}
+    
+    % QUESTION 1
+    \item[1.] Since $72 = 8 \cdot 9$, the number $\overline{a2017b}$ must satisfy divisibility rules for both 8 and 9. For 8, we must have that the number formed by the last 3 digits, $\overline{17b}$, is a multiple of 8. The only multiple of 8 between 170 and 179 is 176, fixing $b=6$. Then for 9, the sum of the digits must be a multiple of 9. Since $2+0+1+7 = 10$, we must have $a+b=8$ or 17 to bring the total up to 18 or 27 respectively. $17-6 = 11$ which is greater than 9 and so we must have that $a=8-6=2$.
+    
+    
+    % QUESTION 2
+    \item[2.] For a \textit{catty} number with $n$-digits, there are two options for each digit (each digit may be either a 2 or a 3). Therefore, the number of $n$-digit catty numbers is simply $2^n$. The total number of catty numbers with $k\leq n$ digits is then $S_n = \sum_{k=1}^{n}2^k = 2^1+2^2+\cdots 2^n$. To find a more compact expression for $S_n$, let us multiply $S_n$ by 2 to get $2^2+2^3+\cdots 2^{n+1}$. Subtracting $S_n$ from $2S_n$ then gives $S_n = (2^2+2^3+\cdots 2^{n+1}) - (2^1+2^2+\cdots 2^n) = 2^{n+1}-2$. $S_{10} = 2^{10+1}-2 =2046$ and so the $2047^{\text{th}}$ is the first \textit{catty} number with 11 digits i.e. 22222222222. The $2048^{\text{th}}$ and $2049^{\text{th}}$ \textit{catty} numbers are then 22222222223 and 22222222232 respectively, leaving the $2050^{\text{th}}$ as 22222222233.
+    
+    % QUESTION 3
+    \item[3.] Applying Cauchy in Engel-form to the left-hand side, we have for $x,y,z \in \mathbb{R}^+ \cup \{0\}$:
+\begin{equation*}
+\frac{1}{1+x}+\frac{1}{1+y}+\frac{1}{1+z} \geq \frac{(1+1+1)^2}{(1+x)+(1+y)+(1+z)} = \frac{3^2}{3+(x+y+z)}
+\end{equation*}
+Using that $x+y+z\leq 3$, we have further that:
+\begin{equation*}
+\frac{3^2}{3+(x+y+z)}\geq \frac{3^2}{3+3} = \frac{3}{2}
+\end{equation*}
+and so, as desired, we have:
+\begin{equation*}
+\frac{1}{1+x}+\frac{1}{1+y}+\frac{1}{1+z} \geq \frac{3}{2}
+\end{equation*}
+
+
+    % QUESTION 4
+    \item[4.] 
+    
+
+    % QUESTION 5
+    \item[5.] Since we want $2^{m^2}-4$ to be a multiple of 7, we must have $2^{m^2} \equiv 4 \pmod{7}$. To this end, let's look at powers of 2$\pmod{7}$. Noticing that $2^3=8\equiv 1 \pmod{7}$ , we have that: $2^{3k} = (2^3)^k \equiv (1)^k = 1 \pmod{7}$, $2^{3k+1} = 2(2^{3k}) \equiv 2(1) = 2 \pmod{7}$, and $2^{3k+2} = 2^2(2^{3k}) \equiv 4(1) = 4 \pmod{7}$. We must therefore have that $m^2 = 3k+2$ for some $k\in \mathbb{N}_0$. However, $(3k)^2\equiv 0 \pmod{3}$, $(3k+1)^2\equiv 1 \pmod{3}$ and $(3k+2)^2 \equiv 2^2 \equiv 1 \pmod{3}$ and so squares can only ever be congruent to 0 or 1 (and not 2) modulo 3. Therefore, there does not exist an $m\in \mathbb{N}_0$ such that $7|(2^{m^2}-4)$.
+    
+    
+\end{enumerate}
+
+\end{document}
+
