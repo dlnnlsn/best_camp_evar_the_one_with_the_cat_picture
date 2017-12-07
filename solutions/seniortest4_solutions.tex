@@ -1,0 +1,125 @@
+\documentclass[a4paper, 12pt]{article}
+%\documentclass{book}
+
+% Important Packages:
+ \usepackage{amsmath}    % need for subequations
+ \usepackage{amsfonts}
+ \usepackage{amsthm}
+ \usepackage{graphicx}   % need for figures
+ \usepackage{verbatim}   % useful for program listings
+ %\usepackage{subfig}  % use for side-by-side figures
+ %\usepackage{wrapfig}
+ %\usepackage{listings}	 % creates code blocks
+ %\usepackage[colorlinks=true]{hyperref}   % use for hypertext links, including
+                     % those to external documents and URLs
+ %\usepackage{multirow}
+ %\usepackage{tikz}
+ %\usepackage{enumerate}
+ %\usetikzlibrary{decorations.pathreplacing,decorations.pathmorphing}
+ %\usetikzlibrary{calc}
+ %\usepackage[colorinlistoftodos]{todonotes}
+ 
+ % Useful macros 
+ \def\tcb#1{\color{blue}{#1}}
+ \def\tcr#1{\color{red}{#1}}	
+ \def\tcg#1{\color{green}{#1}}
+ \def\be{\begin{eqnarray}}	 	\def\ee{\end{eqnarray}}
+ \def\bea{\begin{eqnarray}}	 	\def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}	\def\eean{\end{eqnarray*}}
+ 
+ \def\D{\displaystyle}
+ \def\T{\textstyle}
+ \def\l{\left}
+ \def\r{\right}
+ \def\nf{n_{\!f}} % quark flavours
+ \def\pa{\partial}
+ \def\eg{e.\,g.}
+ \def\ie{i.\,e.}
+
+ \def\be{\begin{equation}}
+ \def\ee{\end{equation}}
+ \def\bea{\begin{eqnarray}}
+ \def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}
+ \def\eean{\end{eqnarray*}}
+ \def\gsim{\mathrel{\rlap{\lower0.2em\hbox{$\sim$}}\raise0.2em\hbox{$>$}}}
+ \def\ksim{\mathrel{\rlap{\lower0.2em\hbox{$\sim$}}\raise0.2em\hbox{$<$}}}
+ \def\kg{\mathrel{\rlap{\lower0.25em\hbox{$>$}}\raise0.25em\hbox{$<$}}}
+ 
+ \def\AA{${\buildrel_{\circ} \over {\mathrm{A}}}$}
+ \def\bm#1{\mbox{\boldmath$#1$}}
+ \newcommand{\eq}[1]{(\ref{#1})} 
+ \def\pd{\partial}
+ \def\d{\textrm{d}} 
+ \def\T{\textstyle}
+ \def\eg{e.\,g.}	% exempli gratia (for the sake of example)
+ \def\ie{i.\,e.}	% id est (that is)
+
+
+ % Page configuration:
+ \topmargin -2.0cm
+ \oddsidemargin -0.85cm
+ \evensidemargin -0.85cm
+ \textwidth 18cm
+ \textheight 24cm
+ 
+\begin{document}
+\begin{center}
+\textbf{Stellenbosch Camp December 2017 \\ Senior Test 4} \\
+\textbf{Solutions}
+\end{center}
+
+\begin{enumerate}
+    % EGMO 2013 solutions: https://www.egmo.org/egmos/egmo2/solutions.pdf
+
+    % QUESTION 1
+    \item[1.] Since we want $2^{m^2}-4$ to be a multiple of 7, we must have $2^{m^2} \equiv 4 \pmod{7}$. To this end, let's look at powers of 2$\pmod{7}$. Noticing that $2^3=8\equiv 1 \pmod{7}$ , we have that: $2^{3k} = (2^3)^k \equiv (1)^k = 1 \pmod{7}$, $2^{3k+1} = 2(2^{3k}) \equiv 2(1) = 2 \pmod{7}$, and $2^{3k+2} = 2^2(2^{3k}) \equiv 4(1) = 4 \pmod{7}$. We must therefore have that $m^2 = 3k+2$ for some $k\in \mathbb{N}_0$. However, $(3k)^2\equiv 0 \pmod{3}$, $(3k+1)^2\equiv 1 \pmod{3}$ and $(3k+2)^2 \equiv 2^2 \equiv 1 \pmod{3}$ and so squares can only ever be congruent to 0 or 1 (and not 2) modulo 3. Therefore, there does not exist an $m\in \mathbb{N}_0$ such that $7|(2^{m^2}-4)$. 
+    
+    % QUESTION 2
+    \item[2.] Consider colouring the board in a checkerboard pattern, with colours black and white. Since 2017 is odd, there cannot be same number of black squares as white squares. As such a described permutation moves every desk on a black square to that of a white square and vice versa, this implies no such permutation is possible.
+    
+    % QUESTION 3
+    \item[3.] 
+    
+    % QUESTION 4
+    \item[4.] To find all \textit{interesting} numbers, note that, if $f(x) = -x$ for all $x \in \mathbb{R}$, we have:
+    $$ f(x) - f(x+y) = y = y^1 $$
+    Hence $n=1$ is interesting. Conversely, if $n$ is interesting, we set $x = 0$ which yields $f(0) - f(y) = y^n$. Letting $x = y$, we obtain $f(y) - f(2y) = y^n$. Summing these two equations gives us $f(0) - f(2y) = 2y^n$. We therefore have:
+    $$ (2y)^n = f(0) - f(2y) = 2y^n $$
+    If $y = 1$, this implies $2^n = 2$, hence $n = 1$. Therefore the only interesting number is $n = 1$.
+    
+    To find all \textit{beautiful} numbers, note that letting $f(x) = 0$ for $x \in \mathbb{R}$ satisfies the inequality for all even $n$. We now assume $n$ is odd. Hence:
+    \begin{align*}
+        &f(x+y)-f(x)=f(x+y)-f(x+y+(-y)) \leq (-y)^n=-y^n \\
+        \implies \quad &f(x)-f(x+y)\geq y^n \\
+        \implies \quad &f(x)-f(x+y)=y^n
+    \end{align*}
+    Hence, if $n$ beautiful and odd, then $n$ must be interesting and so $n = 1$. Thus, all beautiful numbers are $n = 1$ and even $n$.
+    
+    
+    % QUESTION 5
+    \item[5.] Let us consider the general case where there are $S$ scientists altogether, and we want any subset of $M$ scientist not to be able to open the lock, but any subset of $M+1$ scientists to be able to open the lock.
+
+Given a set of $M$ scientists out of the $S$ scientists (we call it an $M$-subset), they are missing a key for some lock.
+
+Moreover two such distinct subsets have a scientist not common to both and thus their union has more then $M$ scientists. If two such $M$-subsets are missing the same key then they're union is missing that key, the union has more then $M$ scientists and thus we have a contradiction.
+
+We define a multimap as follows, for each lock we define its preimage to be the $M$-subset which is missing a key for that lock, as described above there cannot be more then one $M$-subset missing that key (A priori we may have locks which no $M$-subset is missing a key for, so nothing will map to them). Now if some $M$-subset maps to more then one lock then we can throw away all but one lock, the $M$-subset will still not be able to open the safe because he is missing a lock. So we end up with an injection from the collection of $M$-subsets to the set of locks. Thus we have at least $N = {S \choose M}$ locks.
+
+Now we ask if we need more locks then this. Suppose there are more then $N$ locks. WLOG assume our injection from above maps to the first $N$ locks labeled $1$ to $N$. So each $M$-subset is missing a key for one of the first $N$ locks. Now consider the $(N+1)$-th lock which we call $L$, consider the collection $C$ of $M$-subsets not having the key for $L$.
+
+Imagine we throw away lock $L$ and all its keys. Any subset of the scientists which could open the safe before can still open it as we just removed a lock. The $M$-subsets still cannot open the safe because they are missing some key from the first $N$ keys. Thus the $(N+1)$-th key is redundant, By a similar argument any lock labeled with a number > $N$ is redundant.
+
+Thus $S \choose M$ is the minimum sufficient number of locks. For our case, we have $S = 11$ and $M = 5$. Thus, the number of locks we need is ${11 \choose 5} = 462$.
+    
+    
+    
+    
+    
+    
+\end{enumerate}
+\end{document}
+
+
+
+
