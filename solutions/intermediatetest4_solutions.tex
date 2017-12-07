@@ -79,8 +79,21 @@ and so, as desired, we have:
 
 
     % QUESTION 4
-    \item[4.] 
-    
+    \item[3.] Let $O$ be the centre of the circle $\Gamma$, and let the angle
+        bisector of $\angle AXC$ meet $\Gamma$ at the points $S$ on the arc
+        $AC$, and the point $T$ on the arc $BD$.  Since $M$ and $N$
+        are the midpoints of the chords $AB$ and $CD$ respectively, we have that
+        $OM \perp AB$ and $ON \perp CD$. Thus $MXNO$ is a cyclic quadrilateral.
+        We then have that $\angle MOX = \angle MNX$ (subtended by $MX$) $=
+        \angle TXD$ (since $TX \parallel MN$) $= \angle MXT$ (angle bisector) $=
+        \angle XMN$ (since $TX \parallel MN$) $= \angle XON$ (subtended by
+        $XN$). Thus in triangles $\triangle MOX$ and $\triangle NOX$, we have that $\angle MOX =
+        \angle XON$, $\angle XMO = \angle ONX = 90^\circ$, and $OX$ is common,
+        and so $\triangle MOX \equiv \triangle NOX$, giving us that $OM = ON$.
+        Thus in triangles $\triangle OBM$ and $\triangle OCN$, we have $\angle
+        OMB = \angle ONC = 90^\circ$, $OM = ON$, and $OB = OC$ (radii). Thus
+        $\triangle OBM \equiv \triangle OCM$, and so $BM = CN$, giving us that
+        $AB = 2MB = 2NC = CD$.
 
     % QUESTION 5
     \item[5.] Since we want $2^{m^2}-4$ to be a multiple of 7, we must have $2^{m^2} \equiv 4 \pmod{7}$. To this end, let's look at powers of 2$\pmod{7}$. Noticing that $2^3=8\equiv 1 \pmod{7}$ , we have that: $2^{3k} = (2^3)^k \equiv (1)^k = 1 \pmod{7}$, $2^{3k+1} = 2(2^{3k}) \equiv 2(1) = 2 \pmod{7}$, and $2^{3k+2} = 2^2(2^{3k}) \equiv 4(1) = 4 \pmod{7}$. We must therefore have that $m^2 = 3k+2$ for some $k\in \mathbb{N}_0$. However, $(3k)^2\equiv 0 \pmod{3}$, $(3k+1)^2\equiv 1 \pmod{3}$ and $(3k+2)^2 \equiv 2^2 \equiv 1 \pmod{3}$ and so squares can only ever be congruent to 0 or 1 (and not 2) modulo 3. Therefore, there does not exist an $m\in \mathbb{N}_0$ such that $7|(2^{m^2}-4)$.
