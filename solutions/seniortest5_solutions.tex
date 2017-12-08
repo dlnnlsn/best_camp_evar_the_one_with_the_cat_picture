@@ -84,6 +84,25 @@
     \item[5.] 
     
     
+    % QUESTION 6
+    \item[6.] Let $a_n$ be the number on the blackboard after the $n^{th}$ step and let $i_n = a_n - a_{n-1}$ be the increase at the $n^{th}$ step. We claim that for any $n$, either $i_n = 1$ or $a_n = 3n$. We shall prove this by induction.
+    
+    Note that we have $i_1=i_2=i_3=i_4=1$ and $i_5=5\neq 1$ but $a_5=15$. Hence the base case is proven. Let's assume that for some natural $n$ we have $i_n\neq 1$ and $a_n=3n$. Let $k$ be the least natural number such that $i_{n+k}\neq 1$. Note that
+    $$ i_{n+k}=\textrm{gcd}(n+k, i_{n+k-1})=\textrm{gcd}(n+k, 3n+k-1)=\textrm{gcd}(n+k, 2k+1) $$
+    
+    If $2k+1$ is prime, we hence obtain $i_{n+k}=2k+1$ prime and $a_{n+k}=3n+k-1+2k+1=3(n+k)$. This would prove the induction hypothesis, which would hence solve the problem.
+    
+    We are now only left to prove $2k+1$ is prime. Assume for contradiction $2k+1$ is not prime. Consider any prime divisor $p|\textrm{gcd}(n+k, 2k+1)$. We have
+     $$ p|2k+1, p\neq 2k+1 \quad \Longrightarrow \quad p \leq \frac{2k+1}{3} \quad \Longrightarrow \quad p<k $$
+     
+     Now consider
+     $$ i_{n+k-p}=\textrm{gcd}(n+k-p, 3n+k-p-1)=\textrm{gcd}(n+k-p, 2k+1-2p) $$
+     
+     Now, since $p|n+k, 2k+1,$ we have $p|\textrm{gcd}(n+k-p, 2k+1-2p)$ which implies $ i_{n+k-p} \neq 1$ contradicting the minimality of $k$.
+     
+     Hence $2k+1$ is prime, which completes the proof.
+    
+    
 \end{enumerate}
 
 
