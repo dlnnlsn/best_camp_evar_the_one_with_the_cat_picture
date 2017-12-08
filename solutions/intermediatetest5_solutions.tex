@@ -69,7 +69,9 @@
   $\angle PAN=\angle PDN = 45^\circ$ (diagonal $BD$), so $APND$ is a cyclic quadrilateral, since the angles subtended by chord $PN$ are equal. Thus $\angle ANP= \angle PDA = 45^\circ$ ($AP$ common chord), and $\angle APN=90^\circ$ ($\triangle APN$). Then $\angle MPN=90^\circ$ (straight line), so $P$ is subtended by diameter $MN$ in circle $MNP$. By symmetry, the same must apply for point $Q$, using the cyclic quadrilateral $BMQA$. Therefore $P$ and $Q$ both lie on the circle with diameter $MN$.
   
   % QUESTION 3
-  \item[3.] 
+  \item[3.] \emph{Consider an 8-by-8 chessboard with 17 pieces placed on it in separate squares. Prove that there are three of these pieces which lie in three different rows and three different columns.}
+  
+We consider partitioning the chessboard into 8 diagonal sets. Specifically, if we label some two squares as $(i_1, j_1)$ and $(i_2, j_2)$, then these two squares are in the same set if and only if $i_1 - j_1 \equiv i_2 - j_2$ (mod 8). Since this divides the chessboard into 8 sets of 8 squares each, by pigeonhole principle, this implies one such set contains at least 3 pieces, since $17 = 8 \cdot 2 + 1$ . As no two pieces in the same set lie in the same row or column, this completes the proof.
 
 
   % QUESTION 4
@@ -80,9 +82,9 @@
   \begin{equation*}
     x+f(f(x)) = f(x+f(f(x))) = f(x+f(f(y))) = y+f(f(x)) 
   \end{equation*} 
-  and so $x+f(f(x)) = y+f(f(x))$ which implies $x=y$, and so we have $f$ injective.
+  and so $x+f(f(x)) = y+f(f(x))$ which implies $x=y$, and so we have $f$ injective. $f$ is also surjective since fixing $x$ in $f(x+f(f(y)))$, we can reach all $y \in  \mathbb{R}$. So it is bijective.
   
-  Now letting $x=y=0$, we have: $f(f(f(0))) = f(f(0))$ which from injectivity (i.e. we can cancel $f$'s), implies that $f(0)=0$. Letting $y=0$, we get: $f(x+f(f(0))) = f(f(x))$. Using that $f(0)=0$, this simplifies to $f(x)=f(f(x))$. Finally, from injectivity, we get $x=f(x)$. All that remains is to check this is indeed a solution. Subbing $f(x)=x$ into the original equation gives:
+  Now letting $x=y=0$, we have: $f(f(f(0))) = f(f(0))$ which from bijectivity (i.e. we can cancel $f$'s), implies that $f(0)=0$. Letting $y=0$, we get: $f(x+f(f(0))) = f(f(x))$. Using that $f(0)=0$, this simplifies to $f(x)=f(f(x))$. Finally, from bijectivity, we get $x=f(x)$. All that remains is to check this is indeed a solution. Subbing $f(x)=x$ into the original equation gives:
   \begin{equation*}
     f(x+f(y)) = f(x+y) = x+y = y+x = y+f(x) = y+f(f(x))
   \end{equation*}
