@@ -81,7 +81,11 @@
     
 
     % QUESTION 4
-    \item[4.] 
+    \item[4.] \textit{Austrian Mathematical Olympiad 2011, Final Round, part 2, day 1} \\ Since 3 pins (P) or 2 brackets (B) may not lie in a row, they may not do so on an individual brick. This means that there are only three different types of brick: PBPP (type A); PPBP (type B); BPB (type C). Naming the number of possible patterns of $n$ bricks with a brick of type A at the end $a_n$, and analogously $b_n$ and $c_n$ for types B and C, the number we wish to determine is $s_n=a_n+b_n+c_n$. Due to the restrictions on the bricks, we see that $a_{n+1}=b_n+c_n$, $b_{n+1}=c_n$ and $c_{n+1}=a_n+b_n$ with starting values $a_1=b_1=c_1=1$. This yields:
+\begin{equation*}
+s_{n+1}=s_n+(b_n+c_n)=s_n+(a_{n-1}+b_{n-1}+c_{n-1})=s_n+s_{n-1}
+\end{equation*}
+with $s_1=3$ and $s_2=5$. We see that the resulting sequence $s_n$ us simply the Fibonacci sequence starting from the fourth element, and so $s_n=F_{n+3}$.
     
     
     % QUESTION 5
