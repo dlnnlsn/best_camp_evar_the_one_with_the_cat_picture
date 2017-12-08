@@ -58,12 +58,15 @@
 \begin{enumerate}
   
   % QUESTION 1
-  \item[1.] 
+  \item[1.] \emph{Find all pairs $(m,n)$ of positive integers which satisfy the equation
+  \[ mn^2 = 100(n+1). \]} 
   
+  Note that $n$ and $n+1$ differ by 1, and so are coprime. Therefore $n^2$ must divide 100. Whichever value $n$ takes, $m$ can be found as $\frac{(n+1)\cdot100}{n^2}$. So $(m,n)$ can take only the following solutions: $(200,1)$; $(75,2)$; $(24,5)$; $(11,10)$.
   
   % QUESTION 2
-  \item[2.] 
+  \item[2.] \emph{Point $M$ and $N$ are chosen on the sides $BC$ and $CD$ of a square $ABCD$, respectively, so that $\angle MAN = 45^\circ$. Points $P$ and $Q$ are the intersections of the diagonal $BD$ with $AM$ and $AN$, respectively. Prove that $P$ and $Q$ lie on the circle with diameter $MN$.}
   
+  $\angle PAN=\angle PDN = 45^\circ$ (diagonal $BD$), so $APND$ is a cyclic quadrilateral, since the angles subtended by chord $PN$ are equal. Thus $\angle ANP= \angle PDA = 45^\circ$ ($AP$ common chord), and $\angle APN=90^\circ$ ($\triangle APN$). Then $\angle MPN=90^\circ$ (straight line), so $P$ is subtended by diameter $MN$ in circle $MNP$. By symmetry, the same must apply for point $Q$, using the cyclic quadrilateral $BMQA$. Therefore $P$ and $Q$ both lie on the circle with diameter $MN$.
   
   % QUESTION 3
   \item[3.] 
