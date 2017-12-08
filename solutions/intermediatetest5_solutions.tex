@@ -12,11 +12,11 @@
  
  % Useful macros 
  \def\tcb#1{\color{blue}{#1}}
- \def\tcr#1{\color{red}{#1}}	
+ \def\tcr#1{\color{red}{#1}}  
  \def\tcg#1{\color{green}{#1}}
- \def\be{\begin{eqnarray}}	 	\def\ee{\end{eqnarray}}
- \def\bea{\begin{eqnarray}}	 	\def\eea{\end{eqnarray}}
- \def\bean{\begin{eqnarray*}}	\def\eean{\end{eqnarray*}}
+ \def\be{\begin{eqnarray}}     \def\ee{\end{eqnarray}}
+ \def\bea{\begin{eqnarray}}     \def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}  \def\eean{\end{eqnarray*}}
  
  \def\D{\displaystyle}
  \def\T{\textstyle}
@@ -43,8 +43,8 @@
  \def\pd{\partial}
  \def\d{\textrm{d}} 
  \def\T{\textstyle}
- \def\eg{e.\,g.}	% exempli gratia (for the sake of example)
- \def\ie{i.\,e.}	% id est (that is)
+ \def\eg{e.\,g.}  % exempli gratia (for the sake of example)
+ \def\ie{i.\,e.}  % id est (that is)
 
 
 \begin{document}
@@ -56,37 +56,68 @@
 
 
 \begin{enumerate}
-    
-    % QUESTION 1
-    \item[1.] 
-    
-    
-    % QUESTION 2
-    \item[2.] 
-    
-    
-    % QUESTION 3
-    \item[3.] 
+  
+  % QUESTION 1
+  \item[1.] 
+  
+  
+  % QUESTION 2
+  \item[2.] 
+  
+  
+  % QUESTION 3
+  \item[3.] 
 
 
-    % QUESTION 4
-    \item[3.] 
-    
+  % QUESTION 4
+  \item[3.] \emph{Find all functions $f: \mathbb{R} \to \mathbb{R}$ such that for all $x,y \in \mathbb{R}$,
+\[ f(x+f(f(y))) = y+f(f(x)). \]}
+  \textbf{Solution 1:} First, let us prove that $f$ is injective. Assume $f(x)=f(y)$. Applying $f$ on either side, adding $x$ and then applying $f$ again gives: $f(x+f(f(x))) = f(x+f(f(y)))$. Applying the condition in the problem statement to both sides then gives:  
+  \begin{equation*}
+    x+f(f(x)) = f(x+f(f(x))) = f(x+f(f(y))) = y+f(f(x)) 
+  \end{equation*} 
+  and so $x+f(f(x)) = y+f(f(x))$ which implies $x=y$, and so we have $f$ injective.
+  
+  Now letting $x=y=0$, we have: $f(f(f(0))) = f(f(0))$ which from injectivity (i.e. we can cancel $f$'s), implies that $f(0)=0$. Letting $y=0$, we get: $f(x+f(f(0))) = f(f(x))$. Using that $f(0)=0$, this simplifies to $f(x)=f(f(x))$. Finally, from injectivity, we get $x=f(x)$. All that remains is to check this is indeed a solution. Subbing $f(x)=x$ into the original equation gives:
+  \begin{equation*}
+    f(x+f(y)) = f(x+y) = x+y = y+x = y+f(x) = y+f(f(x))
+  \end{equation*}
+  and so $f(x)=x$ is a solution.
+  
+  \textbf{Solution 2:}
+  From the problem statement we have: 
+  \begin{equation}\label{given}
+    f(x+f(f(y)) = y+f(f(x))
+  \end{equation} 
+  Swapping $x$ and $y$ around, we get: 
+  \begin{equation}\label{swap}
+    f(y+f(f(x)) = x+f(f(y))
+  \end{equation} 
+  Noticing that the right-hand side of \eqref{swap} is the same as the left-hand side argument in \eqref{given}, we take $f$'s on both sides and apply \eqref{given}:
+  \begin{equation*}
+    f(f(y+f(f(x)))) = f(x+f(f(y)) = y+f(f(x))
+  \end{equation*}
+  Since $z = y+f(f(x))$ may take on any $\mathbb{R}$ value, the above implies that $f(f(z)) = z$, $\forall z\in \mathbb{R}$. Then, taking $x=0$ in \eqref{given} and using $f(f(z))=z$, we get:
+  \begin{equation*}
+    f(y) = f(f(f(y))) = f(0+f(f(y)) = y+f(f(0)) = y +0 = y
+  \end{equation*} 
+  and so once again, $f(y)=y$ is a candidate for a solution. The check follows as in the previous solution.
+  
 
-    % QUESTION 5
-    \item[5.] 
-    
-    
-    % QUESTION 6
-    \item[6.] \emph{Let $ABCD$ be a convex quadrilateral with no parallel sides. Make a parallelogram on each two consecutive sides. Show that among these 4 new points, there is only one point inside quadrilateral $ABCD$.}
-    
-    Let $\angle A, \angle B, \angle C$ and $\angle D$ denote the interior angles of quadrilateral $ABCD$ at vertices $A$, $B$, $C$ and $D$ respectively, and let $P_A$ denote the vertex opposite $A$ in the parallelogram formed by $D$, $A$ and $B$, and similarly for $P_B$, $P_C$ and $P_D$.
-    
-    Now for $P_A$ to lie inside the quadrilateral $ABCD$, we must have that $\angle ABP_A < \angle ABC = \angle B$ and $\angle ADP_A < \angle ADC = \angle D$. However, since $ABP_AD$ is a parallelogram, $\angle ABP_A = \angle ADP_A = 180^\circ - \angle A$ and so $P_A$ lies inside the quadrilateral if and only if $\angle A + \angle B > 180^\circ$ and $\angle A + \angle D > 180^\circ$, and similarly for $P_B$, $P_C$ and $P_D$.
-    
-    However, $\angle A + \angle B + \angle C + \angle D = 360^\circ$ and (since no two sides of $ABCD$ are parallel) none of $\angle A + \angle B$, $\angle B + \angle C$, $\angle C + \angle D$ or $\angle D + \angle A$ is equal to $180^\circ$. Moreover, $\angle A + \angle B$ is less (greater) than $180^\circ$ exactly as $\angle C + \angle D$ is greater (less) than $180^\circ$ and $\angle B + \angle C$ is less (greater) than $180^\circ$ exactly as $\angle D + \angle A$ is greater (less) than $180^\circ$. Hence it follows that for exactly one of $A$, $B$, $C$ and $D$ (let's call it $X$) $P_X$ lies inside $ABCD$.
-    
-    
+  % QUESTION 5
+  \item[5.] 
+  
+  
+  % QUESTION 6
+  \item[6.] \emph{Let $ABCD$ be a convex quadrilateral with no parallel sides. Make a parallelogram on each two consecutive sides. Show that among these 4 new points, there is only one point inside quadrilateral $ABCD$.}
+  
+  Let $\angle A, \angle B, \angle C$ and $\angle D$ denote the interior angles of quadrilateral $ABCD$ at vertices $A$, $B$, $C$ and $D$ respectively, and let $P_A$ denote the vertex opposite $A$ in the parallelogram formed by $D$, $A$ and $B$, and similarly for $P_B$, $P_C$ and $P_D$.
+  
+  Now for $P_A$ to lie inside the quadrilateral $ABCD$, we must have that $\angle ABP_A < \angle ABC = \angle B$ and $\angle ADP_A < \angle ADC = \angle D$. However, since $ABP_AD$ is a parallelogram, $\angle ABP_A = \angle ADP_A = 180^\circ - \angle A$ and so $P_A$ lies inside the quadrilateral if and only if $\angle A + \angle B > 180^\circ$ and $\angle A + \angle D > 180^\circ$, and similarly for $P_B$, $P_C$ and $P_D$.
+  
+  However, $\angle A + \angle B + \angle C + \angle D = 360^\circ$ and (since no two sides of $ABCD$ are parallel) none of $\angle A + \angle B$, $\angle B + \angle C$, $\angle C + \angle D$ or $\angle D + \angle A$ is equal to $180^\circ$. Moreover, $\angle A + \angle B$ is less (greater) than $180^\circ$ exactly as $\angle C + \angle D$ is greater (less) than $180^\circ$ and $\angle B + \angle C$ is less (greater) than $180^\circ$ exactly as $\angle D + \angle A$ is greater (less) than $180^\circ$. Hence it follows that for exactly one of $A$, $B$, $C$ and $D$ (let's call it $X$) $P_X$ lies inside $ABCD$.
+  
+  
 \end{enumerate}
 
 
