@@ -75,6 +75,7 @@
   % QUESTION 4
   \item[4.] \emph{Find all functions $f: \mathbb{R} \to \mathbb{R}$ such that for all $x,y \in \mathbb{R}$,
 \[ f(x+f(f(y))) = y+f(f(x)). \]}
+
   \textbf{Solution 1:} First, let us prove that $f$ is injective. Assume $f(x)=f(y)$. Applying $f$ on either side, adding $x$ and then applying $f$ again gives: $f(x+f(f(x))) = f(x+f(f(y)))$. Applying the condition in the problem statement to both sides then gives:  
   \begin{equation*}
     x+f(f(x)) = f(x+f(f(x))) = f(x+f(f(y))) = y+f(f(x)) 
