@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+
+% Important Packages:
+ \usepackage{amsmath}    % need for subequations
+ \usepackage{amsfonts}
+ \usepackage{amsthm}
+ \usepackage{graphicx}   % need for figures
+ \usepackage{verbatim}   % useful for program listings
+ %\usepackage{enumerate}
+ \usepackage{fullpage}
+ \usepackage{fancyvrb}
+ 
+ % Useful macros 
+ \def\tcb#1{\color{blue}{#1}}
+ \def\tcr#1{\color{red}{#1}}  
+ \def\tcg#1{\color{green}{#1}}
+ \def\be{\begin{eqnarray}}     \def\ee{\end{eqnarray}}
+ \def\bea{\begin{eqnarray}}     \def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}  \def\eean{\end{eqnarray*}}
+ 
+ \def\D{\displaystyle}
+ \def\T{\textstyle}
+ \def\l{\left}
+ \def\r{\right}
+ \def\nf{n_{\!f}} % quark flavours
+ \def\pa{\partial}
+ \def\eg{e.\,g.}
+ \def\ie{i.\,e.}
+
+ \def\be{\begin{equation}}
+ \def\ee{\end{equation}}
+ \def\bea{\begin{eqnarray}}
+ \def\eea{\end{eqnarray}}
+ \def\bean{\begin{eqnarray*}}
+ \def\eean{\end{eqnarray*}}
+ \def\gsim{\mathrel{\rlap{\lower0.2em\hbox{$\sim$}}\raise0.2em\hbox{$>$}}}
+ \def\ksim{\mathrel{\rlap{\lower0.2em\hbox{$\sim$}}\raise0.2em\hbox{$<$}}}
+ \def\kg{\mathrel{\rlap{\lower0.25em\hbox{$>$}}\raise0.25em\hbox{$<$}}}
+ 
+ \def\AA{${\buildrel_{\circ} \over {\mathrm{A}}}$}
+ \def\bm#1{\mbox{\boldmath$#1$}}
+ \newcommand{\eq}[1]{(\ref{#1})} 
+ \def\pd{\partial}
+ \def\d{\textrm{d}} 
+ \def\T{\textstyle}
+ \def\eg{e.\,g.}  % exempli gratia (for the sake of example)
+ \def\ie{i.\,e.}  % id est (that is)
+
+
+\begin{document}
+
+\begin{center}
+\textbf{Stellenbosch Camp December 2017 \\ Beginner Final Test} \\
+\textbf{Additional Solutions}
+\end{center}
+
+
+\begin{enumerate}
+  
+  % QUESTION 14
+  \item[14.] \emph{Find all pairs $(m,n)$ of positive integers which satisfy the equation
+  \[ mn^2 = 100(n+1). \]}  
+  Note that $n$ and $n+1$ differ by 1, and so are coprime. Therefore $n^2$ must divide 100. Whichever value $n$ takes, $m$ can be found as $\frac{(n+1)\cdot100}{n^2}$. So $(m,n)$ can take only the following solutions: $(200,1)$; $(75,2)$; $(24,5)$; $(11,10)$.
+  
+  % QUESTION 15
+  \item[15.] \emph{Point $M$ and $N$ are chosen on the sides $BC$ and $CD$ of a square $ABCD$, respectively, so that $\angle MAN = 45^\circ$. Points $P$ and $Q$ are the intersections of the diagonal $BD$ with $AM$ and $AN$, respectively. Prove that $P$ and $Q$ lie on the circle with diameter $MN$.}
+  
+  $\angle PAN=\angle PDN = 45^\circ$ (diagonal $BD$), so $APND$ is a cyclic quadrilateral, since the angles subtended by chord $PN$ are equal. Thus $\angle ANP= \angle PDA = 45^\circ$ ($AP$ common chord), and $\angle APN=90^\circ$ ($\triangle APN$). Then $\angle MPN=90^\circ$ (straight line), so $P$ is subtended by diameter $MN$ in circle $MNP$. By symmetry, the same must apply for point $Q$, using the cyclic quadrilateral $BMQA$. Therefore $P$ and $Q$ both lie on the circle with diameter $MN$.
+
+  
+\end{enumerate}
+
+
+\vspace{1cm}
+\centering
+\begin{BVerbatim}
+             *     ,MMM8&&&.            *
+                  MMMM88&&&&&    .
+                 MMMM88&&&&&&&
+     *           MMM88&&&&&&&&
+                 MMM88&&&&&&&&
+                 'MMM88&&&&&&'
+                   'MMM8&&&'      *
+          |\___/|
+          )     (             .              '
+         =\     /=
+           )===(       *
+          /     \
+          |     |
+         /       \
+         \       /
+  _/\_/\_/\__  _/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
+  |  |  |  |( (  |  |  |  |  |  |  |  |  |  |
+  |  |  |  | ) ) |  |  |  |  |  |  |  |  |  |
+  |  |  |  |(_(  |  |  |  |  |  |  |  |  |  |
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+  jgs|  |  |  |  |  |  |  |  |  |  |  |  |  |
+\end{BVerbatim}
+
+\end{document}
+
