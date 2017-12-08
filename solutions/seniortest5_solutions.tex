@@ -89,7 +89,27 @@ with $s_1=3$ and $s_2=5$. We see that the resulting sequence $s_n$ us simply the
     
     
     % QUESTION 5
-    \item[5.] 
+    \item[5.] We first prove that $f$ is injective. Let $a, b \in \mathbb{N}$ such that $f(a) = f(b)$. Letting $w = x = y = 1$ and $z = a$ and $z = b$ for the LHS and RHS respectively, we obtain:
+    \begin{align*}
+        f(a) = f(b) &\implies f(f(f(a))) f(f(f(a))) =  f(f(f(b))) f(f(f(b))) \\
+        &\implies a^2 f(f(1)) f(1) = b^2 f(f(1)) f(1) \\ &\implies a = b
+    \end{align*} 
+    as $f(f(1)) f(1) \in \mathbb{N}$. Hence $f$ is injective. Setting $z = 1$ and $w = f(f(1))$, we obtain:
+    \begin{align*}
+        f(f(f(1))) f(f(f(1)) x f(yf(1))) &= f(xf(y)) f(f(f(1))) \\
+        \implies \quad f(f(f(1)) x f(yf(1))) &= f(xf(y)) \\
+        \implies \qquad f(f(1)) x f(yf(1)) &= x f(y)
+    \end{align*}
+    where the last line is obtained due to injectivity. We now let $f(1) = c$ and set $x = 1$. The last equation therefore yields:
+    $$ f(c) f(yc) = f(y) $$
+    For $y = 1$, we get: $f(c) f(c) = f(1) = c$. For $y = c$, we get: $f(c) f(c^2) = f(c)$ which implies $f(c^2) = 1$. For $y = c^2$, we get: $f(c) f(c^3) = f(c^2) = 1$ which implies $f(c) = f(c^3) = 1$ since the only product of two natural numbers which gives 1 is $1 \cdot 1$. By injectivity, we obtain: $c = c^3$, hence $f(1) = c = 1$.
+    
+    Letting $z = y = 1$ in the original equation now gives us:
+    $$ f(wx) = f(x) f(w) $$
+    Hence, $f$ is multiplicative, which implies:
+    $$ f(n!) = f(1) f(2) f(3) \dots f(n) $$
+    As $f$ is injective, each of the factors on the right hand side must be a distinct natural number. Since the product of $n$ distinct natural numbers is at least $n!$, we obtain $f(n!) \geq n!$ which completes the proof.
+    
     
     
     % QUESTION 6
