@@ -2,6 +2,7 @@
 \usepackage{amsmath,amsfonts}
 \usepackage[cm]{fullpage}
 \usepackage{fancyvrb}
+\usepackage{graphicx}
 
 \title{January Monthly Problem Set}
 \author{Due: 15 January 2018}
@@ -46,7 +47,17 @@ and so we again must have that $p = 3$, which is again a contradiction. Thus $n
  
 \item % Swiss 2017 Q1
 % Let $A$ and $B$ be points on a circle $k$ with centre $O$ such that $AB > AO$. Let $C \neq A$ be the second intersection point of the angle bisector of $\angle OAB$ with $k$. Let $D \neq B$ be the intersection of the line $AB$ with the circumcircle of $OBC$. Prove that $AD = AO$.
+Since $OC = OA$ (radii), we have that $\angle ACO = \angle OAC = \angle CAB$.
+Since $OA = OB$, we then have that $2\angle ACO = \angle OAB = \angle ABO$, and
+since $DBCO$ is a cyclic quadrilateral, this is equal to $\angle DCO$. It
+follows that $\angle DCA = \angle ACO$, and so in triangles $\triangle OAC$ and
+$\triangle DAC$, we have that $\angle OAC = \angle CAD$, $\angle DCA = \angle
+ACO$, and $AC$ is common, and so $\triangle OAC \cong \triangle DAC$, giving us
+that $AD = AO$.
 
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{january_q2.png}
+\end{center}
 
 \item % Croatia
 % Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that
