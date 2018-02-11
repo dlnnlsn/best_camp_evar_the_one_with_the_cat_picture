@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsfonts}
+\usepackage[cm]{fullpage}
+
+\pagenumbering{gobble}
+
+\title{\vspace{-24pt}February Monthly Problem Set}
+\author{Due: 12 February 2018}
+\date{}
+
+
+\begin{document} \maketitle \pagestyle{empty}
+
+\begin{enumerate}
+
+\item % Hellenic Math Olympiad 2017 Juniors Q3
+% Determine all positive integers $a,b,p$, where $p$ is prime, satisfying the following equation:
+% \[ \frac{1}{p} = \frac{1}{a^2} + \frac{1}{b^2}. \]
+The given equation is equivalent to
+\[
+    p(a^2 + b^2) = a^2 b^2.
+\]
+
+We note that $p \mid a^2 b^2$, and so either $p \mid a$ or $p \mid
+b$. Without loss of generality, let $p \mid a$, so that $a = pk$ for some
+natural number $k$. The equation then becomes
+\[
+    a^2 + b^2 = pk^2 b^2.
+\]
+
+We thus have that $b^2 \mid a^2 + b^2$, and so $b^2 \mid a^2$, which
+gives us that $b \mid a$. Let $a = mb$ for some natural number $m$. The
+equation then becomes
+\[
+    p(m^2 + 1) b^2 = m^2 b^4,
+\]
+or equivalently
+\[
+    p(m^2 + 1) = m^2 b^2.
+\]
+
+Since $\gcd(m^2, m^2 + 1) = 1$, this implies that $m^2 \mid p$, and so $m =
+1$. This gives us that $a = b$, and so the equation simplifies to
+\[
+    2p = b^2,
+\]
+which implies that $a = b = p = 2$. This is indeed a solution since
+\[
+    \frac{1}{2} = \frac{1}{4} + \frac{1}{4}.
+\]
+
+\item % Easy-Med? Germany 2015
+%Let $M$ be the midpoint of side $AB$ of $\triangle ABC$ in which $BC>CA$. The perpendicular bisector of $AB$ meets $BC$ in $P$ and $AC$ extended in $Q$. Let $R$ be the foot of the perpendicular from $P$ onto $AC$ and let $S$ be the foot of the perpendicular from $Q$ onto $BC$. Prove that $M$, $R$ and $S$ lie on a straight line.
+
+
+\item % Scry 2, Magic the Gathering
+%Consider a deck of $n$ cards with cards numbered from $1$ to $n$. There is one card of each number, but the deck is shuffled, so the cards do not necessarily appear in numerical order. You are allowed to perform the following operation on the deck: You look at the top two cards of the deck, and place one of these two cards on the bottom of the deck, and the other card on top. Show that it is possible, using only this operation some number of times, to sort the deck so that the cards appear in ascending order. 
+
+
+\item % DB-2012-7
+%Determine all triples of real numbers $(x,y,z)$ that simultaneously satisfy the equations:
+%\begin{align*}
+%	(x^2 - 4x + 7 )(y^2 + 6y + 14) &= 120 \\
+%	(y^2 - 6y + 14)(z^2 + 8z + 23) &= 336 \\
+%	(z^2 - 8z + 23)(x^2 + 4x + 7 ) &= 96.
+%\end{align*}
+
+
+\item % Hard? Dutch IMO Selection 2016
+%Determine the number of sets $A = \{a_1,a_2,\ldots, a_{1000}\}$ of positive integers satisfying $a_1 < a_2 < \dotsb < a_{1000} \le 2014$ for which the set
+%	\[ S = \{a_i+a_j \mid 1\le i,j\le 1000,\ i+j\in A\} \]
+%is a subset of $A$.
+
+
+\item % SW-2011-4
+%Determine the largest integer $C$ such that the inequality \[ (x_1^2+200) +(x_2^2+200) +\dotsb +(x_k^2+200) \geq C \] holds for all positive integers $k$ and all $k$-tuples $(x_1,x_2,\dotsc,x_k)$ of positive integers such that $x_1+x_2+\dotsb+x_k = 100$.
+
+
+\item % JM-2012-4
+%Let $ABC$ be a triangle with circumcentre $O$. Let $\omega_1$ and $\omega_2$ be two circles both with centre $O$ but with different sizes. Let $\omega_1$ intersect $AB$ in $P$ and $Q$ (with $P$ closer to $A$) and $\omega_2$ intersect $AC$ in $R$ and $S$ (with $R$ closer to $A$). Let $RQ$ intersect $BC$ at $K$ and let $PS$ intersect $BC$ at $L$. Prove that $BK = CL$.
+
+
+\item % LB-2010-2
+%Find all functions $f : \mathbb{Z} \to \mathbb{Z}$ such that for each pair of integers $a$ and $b$, where $a < b$, there exists a prime number $p$ and a nonnegative integer $c$ such that \[ \frac{f(b)-f(a)}{b-a} = p^c. \]
+
+
+\end{enumerate}
+
+\end{document}
