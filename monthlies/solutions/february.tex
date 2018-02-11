@@ -60,7 +60,7 @@ respect to this circle. It follows that $BP \times BS = AR \times AQ$. By
 applying Power of a Point in this circle to point $C$, we also have that $CQ
 \times CR = CP \times CS$.
 
-By Menelaus' Theorem applied to triangle $ABC$ and line $MPQ$, we have that
+By Menelaus' Theorem applied to triangle $\triangle ABC$ and line $MPQ$, we have that
 \[
     \frac{AM}{MB} \cdot \frac{BP}{PC} \cdot \frac{CQ}{CA} = 1.
 \]
@@ -134,7 +134,56 @@ $1$ to $(k + 1)$ at the bottom of the deck in ascending order as desired.
 
 \item % JM-2012-4
 %Let $ABC$ be a triangle with circumcentre $O$. Let $\omega_1$ and $\omega_2$ be two circles both with centre $O$ but with different sizes. Let $\omega_1$ intersect $AB$ in $P$ and $Q$ (with $P$ closer to $A$) and $\omega_2$ intersect $AC$ in $R$ and $S$ (with $R$ closer to $A$). Let $RQ$ intersect $BC$ at $K$ and let $PS$ intersect $BC$ at $L$. Prove that $BK = CL$.
+We make use of directed line segments.
 
+Since $A$ and $B$ are an equal distance from $O$, they have equal power with
+respect to $\omega_1$, and so we have that $AP \times AQ = BP \times BQ$.
+Simllarly, since $A$ and $C$ are an equal distance from $O$, they have equal
+power with respect to $\omega_2$, and so we have that $AR \times AS = CS \times
+CR$.
+
+Applying Menelaus' Theorem to triangle $\triangle ABC$ and line $RQK$, we have
+that
+\[
+    \frac{AQ}{QB} \cdot \frac{BK}{KC} \cdot \frac{CR}{RA} = -1.
+\]
+Applying Menelaus' Theorem to triangle $\triangle ABC$ and line $PSL$ gives us
+that
+\[
+    \frac{AP}{PB} \cdot \frac{BL}{LC} \cdot \frac{CS}{SA} = -1.
+\]
+Multiplying these together gives us that
+\[
+    \frac{AP \times AQ}{PB \times QB} \cdot \frac{BL \times BK}{LC \times KC}
+    \cdot \frac{CS \times CR}{SA \times RA} = 1.
+\]
+
+But we know that
+\[
+    \frac{AP \times AQ}{PB \times QB} = \frac{CS \times CR}{SA \times RA} = 1.
+\]
+and so we have that
+\[
+    BL \times BK = LC \times KC.
+\]
+
+We thus have that
+\[
+    BK (BC + CL) = LC (KB + BC)
+\]
+and so
+\[
+    BK \times BC + BK \times CL = BK \times CL + LC \times BC
+\]
+giving us that
+\[
+    BK = LC
+\]
+as desired.
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{february_q7.png}
+\end{center}
 
 \item % LB-2010-2
 %Find all functions $f : \mathbb{Z} \to \mathbb{Z}$ such that for each pair of integers $a$ and $b$, where $a < b$, there exists a prime number $p$ and a nonnegative integer $c$ such that \[ \frac{f(b)-f(a)}{b-a} = p^c. \]
