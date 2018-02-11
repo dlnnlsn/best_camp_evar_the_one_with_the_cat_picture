@@ -140,6 +140,122 @@ as required.
 %  \[ f(xy-1) + f(x)f(y) = 2xy-1 \]
 %for all $x,y\in R$.
 
+Let $y = 0$ in the functional equation. We obtain that
+\[
+    f(-1) + f(x) f(0) = -1.
+\]
+If $f(0) \neq 0$, then this would imply that $f$ is constant, but constant
+functions do not satisfy the functional equation. Thus we must have that $f(0) =
+0$, from which we obtain that $f(-1) = -1$.
+
+Substituting $xy$ for $x$, and $1$ for $y$ in the functional equation, we get
+that
+\begin{equation} \label{eq:q6_multiplicative}
+    f(xy) f(1) = 2xy - 1 - f(xy - 1) = f(x) f(y).
+\end{equation}
+
+Now let $x = y = 1$ in the functional equation. This gives us that $f(1)^2 = 1$,
+and so either $f(1) = 1$ or $f(1) = -1$. We consider the two cases separately.
+
+\begin{enumerate}
+
+\item[Case 1:] $f(1) = 1$
+
+In this case, equation \ref{eq:q6_multiplicative} gives us that $f(xy) = f(x)
+f(y)$.
+
+Letting $y = 1$ in the functional equation, we see that
+\begin{equation} \label{eq:q6_case1_1}
+    f(x - 1) + f(x) = 2x - 1.
+\end{equation}
+
+Replacing $x$ with $x + 1$ in equation \ref{eq:q6_case1_1}, we also have that
+\begin{equation} \label{eq:q6_case1_2}
+    f(x + 1) + f(x) = 2x + 1.
+\end{equation}
+
+Adding equations \ref{eq:q6_case1_1} and \ref{eq:q6_case1_2}, we find that
+\[
+    f(x + 1) + f(x - 1) = 4x - 2f(x)
+\]
+while multiplying them gives us that
+\begin{equation} \label{eq:q6_case1_4}
+    f(x + 1) f(x - 1) + f(x) (f(x - 1) + f(x + 1) + f(x)^2 = 4x^2 - 1.
+\end{equation}
+
+We know that $f(x + 1) f(x - 1) = f(x^2 - 1)$, and the functional equation tells
+us that
+\[
+    f(x^2 - 1) + f(x)^2 = 2x^2 - 1.
+\]
+Equation \ref{eq:q6_case1_4} thus becomes
+\[
+    f(x) (4x - 2f(x)) = 2x^2
+\]
+which simplifies to
+\[
+    (f(x) - x)^2 = 0.
+\]
+
+Thus we have that $f(x) = x$ for all $x$. We check that this satifies the
+functional equation. If $f(x) = x$ for all $x$, we have that
+\[
+    f(xy - 1) + f(x) f(y) = xy - 1 + xy = 2xy - 1,
+\]
+as required.
+
+\item[Case 2:] $f(1) = -1$
+
+In this case, equation \ref{eq:q6_multiplicative} gives us that $f(xy) = -f(x)
+f(y)$.
+
+Let $y = 1$ in the functional equation. This gives us that
+\begin{equation} \label{eq:q6_case2_1}
+    f(x - 1) - f(x) = 2x - 1.
+\end{equation}
+
+Replacing $x$ with $x + 1$ in equation \ref{eq:q6_case2_1}, we get that
+\begin{equation} \label{eq:q6_case2_2}
+    f(x + 1) - f(x) = -(2x + 1).
+\end{equation}
+
+Adding equations \ref{eq:q6_case2_1} and \ref{eq:q6_case2_2} gives us that
+\[
+    f(x - 1) + f(x + 1) = 2f(x) - 2
+\]
+while multiplying them gives us that
+\begin{equation} \label{eq:q6_case2_4}
+    f(x - 1) f(x + 1) - f(x) (f(x - 1) + f(x + 1)) + f(x)^2 = 1 - 4x^2.
+\end{equation}
+
+We know that $f(x - 1) f(x + 1) = -f(x^2 - 1)$, and the functional equation
+tells us that
+\[
+    f(x^2 - 1) = 2x^2 - 1 - f(x)^2.
+\]
+Equation \ref{eq:q6_case2_4} thus becomes
+\[
+    f(x)^2 - 2x^2 + 1 - f(x) (2f(x) - 2) + f(x)^2 = 1 - 4x^2,
+\]
+which simplifies to
+\[
+    2f(x) = -2x^2.
+\]
+
+Thus we have that $f(x) = -x^2$ for all real numbers $x$. We check that this
+satisfies the function equation. If $f(x) = -x^2$ for all $x$, we have that
+\[
+    f(xy - 1) + f(x) f(y) = -(xy - 1)^2 + (-x^2)(-y^2) = -x^2 y^2 + 2xy - 1 +
+    x^2 y^2 = 2xy - 1,
+\]
+as required.
+
+\end{enumerate}
+
+All solutions to the functional equation are thus given by the functions defined
+by $f(x) = x$ for all real numbers $x$, and $f(x) = -x^2$ for all real numbers
+$x$.
+
 \item % Hard Dutch IMO Selection 2016
 %Let $\Gamma_1$ be a circle with centre $A$ and $\Gamma_2$ be a circle with centre $B$ such that $A$ lies on $\Gamma_2$. On $\Gamma_2$ there is a (variable) point $P$ not lying on $AB$. A line through $P$ is a tangent of $\Gamma_1$ at $S$, and it interesects $\Gamma_2$ again in $Q$, with $Q$ and $P$ lying on the same side of $AB$. A different line through $Q$ is tangent to $\Gamma_1$ at $T$. Moreover, let $M$ be the foot of the perpendicular to $AB$ through $P$. Let $N$ be the intersection of $AQ$ and $MT$.
 %
