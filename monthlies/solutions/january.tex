@@ -56,7 +56,7 @@ ACO$, and $AC$ is common, and so $\triangle OAC \cong \triangle DAC$, giving us
 that $AD = AO$.
 
 \begin{center}
-    \includegraphics[width=0.5\textwidth]{january_q2.png}
+    \includegraphics[width=0.8\textwidth]{january_q2.png}
 \end{center}
 
 \item % Croatia
@@ -144,6 +144,33 @@ as required.
 %Let $\Gamma_1$ be a circle with centre $A$ and $\Gamma_2$ be a circle with centre $B$ such that $A$ lies on $\Gamma_2$. On $\Gamma_2$ there is a (variable) point $P$ not lying on $AB$. A line through $P$ is a tangent of $\Gamma_1$ at $S$, and it interesects $\Gamma_2$ again in $Q$, with $Q$ and $P$ lying on the same side of $AB$. A different line through $Q$ is tangent to $\Gamma_1$ at $T$. Moreover, let $M$ be the foot of the perpendicular to $AB$ through $P$. Let $N$ be the intersection of $AQ$ and $MT$.
 %
 %Prove that $N$ lies on a line independent of the position of $P$ on $\Gamma_2$.
+
+We use directed angles to avoid considering two separate cases depending on
+whether $P$ lies between $S$ and $Q$, or $Q$ lies between $S$ and $P$.
+
+We note that since $\angle QSA = \angle ATQ = 90^\circ$, we have that $ASQT$ is
+cyclic, and so $\angle QST = \angle QAT$. Since triangles $\triangle TAQ$ and
+$\triangle SAQ$ have three corresponding sides equal, we have that $\triangle
+TAQ \cong \triangle SAQ$, and so 
+\[
+    \angle QAT = \angle SAQ = 90^\circ - \angle AQS = 90^\circ - \frac{1}{2}
+    \angle ABP = \angle PAB = \angle PAM.
+\]
+
+Since $\angle PSA = \angle AMP = 90^\circ$, we have that $ASPM$ is cyclic, and
+so $\angle PAM = \angle PSM = \angle QSM$. We thus have that $\angle QST =
+\angle QSM$, and so $T$, $M$, and $S$ are collinear, and so $N$ is the
+intersection of the lines $AQ$ and $ST$.
+
+Let $\Gamma_3$ be the circumcircle of $ASQT$. Then $N$ lies on $ST$, which is
+the radical axis of $\Gamma_1$ and $\Gamma_3$, and $N$ lies on $AQ$, which is
+the radical axis of $\Gamma_2$ and $\Gamma_3$. Thus $N$ is the radical center of
+$\Gamma_1$, $\Gamma_2$, and $\Gamma_3$, and hence $N$ lies on the radical axis
+of $\Gamma_1$ and $\Gamma_2$, which is a line that does not depend on $P$.
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{january_q7.png}
+\end{center}
 
 \item % Med-Hard? Dutch IMO Selection 2016
 %Let $k$ be a positive integer, and let $s(n)$ denote the sum of the digits of $n$. Show that among all positive integers with $k$ digits, there are as many numbers $n$ satisfying $s(n) < s(2n)$ as there are numbers $n$ satisfying $s(n) > s(2n)$.
