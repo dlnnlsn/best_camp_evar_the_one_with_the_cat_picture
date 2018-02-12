@@ -120,6 +120,65 @@ $1$ to $(k + 1)$ at the bottom of the deck in ascending order as desired.
 %	(y^2 - 6y + 14)(z^2 + 8z + 23) &= 336 \\
 %	(z^2 - 8z + 23)(x^2 + 4x + 7 ) &= 96.
 %\end{align*}
+Note that
+\[
+    (x^2 - 4x + 7)(x^2 + 4x + 7) = (x^2 + 7)^2 - 16x^2 = x^4 - 2x^2 + 49 = (x^2
+    - 1) + 48.
+\]
+
+Similarly,
+\[
+    (y^2 - 6y + 14)(y^2 + 6y + 14) = (y^2 - 4)^2 + 180,
+\]
+and
+\[
+    (z^2 - 8z + 23)(z^2 + 8z + 23) = (z^2 - 9)^2 + 448.
+\]
+
+Thus multiplying the given equations together, we obtain that
+\[
+    \left( (x^2 - 1)^2 + 48 \right) \left( (y^2 - 4)^2 + 180 \right) \left( (z^2
+    - 9)^2 + 448 \right) = 120 \cdot 336 \cdot 96.
+\]
+
+Now the left hand side is greater than or equal to $48 \cdot 180 \cdot 448$,
+which conveniently happens to be equal to $120 \cdot 336 \cdot 96$. Since
+equality holds, we must have that
+\[
+    x^2 - 1 = y^2 - 4 = z^2 - 9 = 0.
+\]
+
+If $x = 1$, then the equation
+\[
+    (x^2 - 4x + 7)(y^2 + 6y + 14) = 120
+\]
+gives us that
+\[
+    y^2 + 6y + 14 = 30
+\]
+and so $y = 2$. The equation
+\[
+    (y^2 - 6y + 14)(z^2 + 8z + 23) = 336
+\]
+then gives us that
+\[
+    z^2 + 8z + 23 = 56
+\]
+and of $z = 3$ and $z = -3$, only $z = 3$ satisfies this equation.
+
+If, on the other hand, $x = -1$, then the equation
+\[
+    (x^2 - 4x + 7)(y^2 + 6y + 14) = 120
+\]
+gives us that
+\[
+    y^2 + 6y + 14 = 10,
+\]
+and neither $y = 2$ nor $y = -2$ satisfies this equation.
+
+Thus the only solution to the given system of equations is given by $(x, y, z) =
+(1, 2, 3)$.
+
 
 
 \item % Hard? Dutch IMO Selection 2016
