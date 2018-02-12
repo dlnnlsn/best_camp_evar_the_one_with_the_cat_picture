@@ -130,6 +130,42 @@ $1$ to $(k + 1)$ at the bottom of the deck in ascending order as desired.
 
 \item % SW-2011-4
 %Determine the largest integer $C$ such that the inequality \[ (x_1^2+200) +(x_2^2+200) +\dotsb +(x_k^2+200) \geq C \] holds for all positive integers $k$ and all $k$-tuples $(x_1,x_2,\dotsc,x_k)$ of positive integers such that $x_1+x_2+\dotsb+x_k = 100$.
+By [instert your favourite inequality here], we know that
+\[
+    k(x_1^2 + x_2^2 + \dots + x_k^2) \geq (x_1 + x_2 + \dots + x_k)^2 = 10000.
+\]
+
+We thus have that
+\[
+    (x_1^2 + 200) + (x_2^2 + 200) + \dots + (x_k^2 + 200) \geq \frac{10000}{k} +
+    200k \geq 2 \sqrt{2 \times 10^6} = 2000 \sqrt{2},
+\]
+where the last inequality follows from AM-GM. Since $\sqrt{2} > 1.414$, we have
+that
+\[
+    (x_1^2 + 200) + (x_2^2 + 200) + \dots + (x_k^2 + 200) > 2828.
+\]
+
+Now $x_i^2$ has the same parity as $x_i$, so we have that
+\[
+    (x_1^2 + 200) + (x_2^2 + 200) + \cdots + (x_k^2 + 200)  
+\]
+is an even integer, and hence is at least equal to $2830$. Thus the inequality
+holds for $C = 2830$.
+
+To see that $2830$ is the best possible value for $C$, let
+\begin{align*}
+    x_1 & = x_2 = \dots = x_5 = 14 & \text{and} && x_6 & = x_7 = 15.
+\end{align*}
+Then 
+\[
+    x_1 + x_2 + \dots + x_7 = 5 \times 14 + 2 \times 15 = 100,
+\]
+and
+\[
+    (x_1^2 + 200) + (x_2^2 + 200) + \dots + (x_7^2 + 200) = 5 \times 14^2 + 2
+    \times 15^2 + 7 \times 200 = 2830.
+\]
 
 
 \item % JM-2012-4
