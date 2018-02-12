@@ -128,6 +128,42 @@ as required.
 \item % P Soberon, Problem-Solving Methods in Combinatorics (ladybird --> cat)
 % On a 2017x2017 board, some of the squares are occupied by a single cat; the rest of the squares are empty. The cats move, never leaving the board, according to the following rules: every second, each cat moves to a neighbouring square, either horizontally (to the square to its immediate left or right) or vertically (to the square below or above its current square); a cat which makes a horizontal move must move vertically on its next move, and a cat which makes a vertical move must move horizontally on its next move. Determine the smallest number of cats such that regardless of their initial positions and their chosen paths, we may ensure that two of them will eventually find themselves in the same square, at the same moment.
 
+Colour the board so that the odd numbered rows are coloured alternately red
+and blue, and the even numbered rows are coloured alternately green and yellow,
+as in the figure below.
+
+\begin{center}
+    \includegraphics{january_q4.eps}
+\end{center}
+
+Notice that after every two seconds, any cat that is in a red square will end up
+in a yellow square and vice-versa.
+
+Suppose that no two cats are ever on the same square at the same moment. Then
+our previous observation implies that, at every point in time, the number of
+cats on red squares is at most equal to the number of yellow squares, as
+otherwise, by the pigeon-hole principle, two of these cats would end up on the
+same yellow square after two seconds.
+
+We also note that after every second, any cat that is on a blue or green square
+will be on a red or yellow square. Of those, the number that will be on red
+squares is at most equal to the number of yellow squares, and so we conclude
+that, at any point in time, the number of cats on blue or green squares is at
+most twice the number of yellow squares.
+
+Putting these observations together, the total number of cats on the board is at
+most equal to $4$ times the number of yellow squares, which is equal to $4
+\times 1008^2 = 2016^2$.
+
+Thus if we have $2016^2 + 1$ cats on the board, then we are guaranteed that two
+of them will eventually find themselves on the same square at the same time. To
+see that this is the smallest number of cats necessary, it is enough to show
+that we can place $2016^2$ cats on the board, and coordinate their moves so that
+no two of them are ever on the same square at the same time. To do this, place a
+cat on each of the squares on the lower left $2016 \times 2016$ sub-board. Then
+have all of the cats move up, then right, then down, and then left, and repeat
+this sequence of moves indefinitely.
+
 
 \item % German NMO 2016 Second Round Q4
 % Each side of a regular dodecahedron detmines a plane in a unique way. These planes divide the space into a finite number of distinct parts. Determine the number of these parts.
