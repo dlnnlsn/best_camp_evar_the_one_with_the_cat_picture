@@ -282,7 +282,113 @@ as desired.
 
 \item % LB-2010-2
 %Find all functions $f : \mathbb{Z} \to \mathbb{Z}$ such that for each pair of integers $a$ and $b$, where $a < b$, there exists a prime number $p$ and a nonnegative integer $c$ such that \[ \frac{f(b)-f(a)}{b-a} = p^c. \]
+Note that the function $f$ satisfies the condition if and only if the function
+$n \mapsto f(n) - f(0)$ does, and so we may assume that $f(0) = 0$.
 
+Also note that exchanging $a$ and $b$ does not alter the value of
+\[
+    \frac{f(b) - f(a)}{b - a},
+\]
+and so we may replace the condition that $a < b$ with $a \neq b$.
+
+Let $a = 0$. Then we have that for all $b \neq 0$ that
+\[
+    \frac{f(b)}{b}
+\]
+is a power of a prime number.
+Let $g$ be the function defined by $f(n) = n \cdot g(n)$ for all $n$, and $g(0)
+= 1$. Our previous observation then gives us that $g(n)$ is a power of a prime
+for all $n$.
+
+Suppose that there is some $k \neq 0$ such that $g(k) \neq 1$. Let $g(k) = p^c$
+where $p$ is a prime number, and let $k = p^s \cdot t$ where $\gcd(p, t) = 1$.
+
+I claim that for all $m > c + s$, that we have that
+\[
+    g\left( p^m + k \right) = p^c.
+\]
+
+Indeed, the condition on $f$ and the definition of $g$ gives us that
+\[
+    \frac{\left(p^m + k\right) g\left(p^m + k\right) - k \cdot p^c}{p^m} =
+    \frac{f\left(p^m + k\right) - f(k)}{\left(p^m + k\right) - k}
+\]
+is a power of a prime.
+
+Since $p^{c + s}$ divides both $p^m$ and $k \cdot p^c$, this gives us that
+\[
+    p^{c + s} \mid k \cdot g \left( p^m + k \right) = p^s \cdot t \cdot g \left(
+    p^m + k \right),
+\]
+which implies that
+\[
+    p^c \mid t \cdot g \left( p^m + k \right),
+\]
+and since $\gcd(p, t) = 1$, this gives us that
+\[
+    p^c \mid g \left( p^m + k \right),
+\]
+and so
+\[
+    g \left( p^m + k \right) = p^{c + r}
+\]
+for some non-negative integer $r$. (Since $g$ is always a power of a prime.)
+
+We thus have that
+\[
+    \frac{p^{c + r} \left( p^m + k \right) - p^{s + c} \cdot t}{p^m}
+\]
+is a power of a prime.
+
+If $r > 0$, then we note that since $k$ and $p^m$ are both divisible by $p^s$,
+we have that
+\[
+    p^{c + r} \left( p^m + k \right)
+\]
+is divisible by $p^{s + c + 1}$, and since $\gcd(p, t) = 1$, this implies that
+the largest power of $p$ which divides
+\[
+    p^{c + r} \left( p^m + k \right) - p^{s + c} \cdot t
+\]
+is exactly $p^{s + c}$. But $p^m > p^{s + c}$, so
+\[
+    \frac{p^{c + r} \left( p^m + k \right) - p^{s + c} \cdot t}{p^m}
+\]
+is not an integer, which is a contradiction. Thus we have that $r = 0$, and so
+\[
+    g \left( p^m + k \right) = p^c.
+\]
+
+We thus have that there are arbitrarily large values of $m$ such that $g(m) =
+p^c$.
+
+Now consider any $n \neq 0$. For any $m$ such that $g(m) = p^c$, we have that
+\[
+    n - m \mid f(n) - f(m) = ng(n) - m\cdot p^c,
+\]
+and so
+\[
+    m - n \mid ng(n) - m\cdot p^c + (m - n) \cdot p^c = n(g(n) - p^c).
+\]
+
+Since this holds for arbitrarily large values of $m$, we must have that
+\[
+    n(g(n) - p^c) = 0,
+\]
+and so $g(n) = p^c$. We thus have that $f(n) = n \cdot p^c$ for all $n$, and we
+can check that this is a valid solution.
+
+What we have shown is that if there is some $k$ such that $g(k) = p^c \neq 1$,
+then $f(n) = n \cdot p^c$ for all $n$. The other possibility is that instead
+$g(k) = 1$ for all $k$. This then gives us that $f(n) = n$ for all $n$, and we
+can check that this is also a valid solution.
+
+Remembering that we have been dealing with the function $n \mapsto f(n) - f(0)$
+rather than $f$, we see that all solutions to the problem are of the form
+\[
+    f(n) = p^c \cdot n + d
+\]
+for some prime number $p$, some non-negative integer $c$, and some integer $d$.
 
 \end{enumerate}
 

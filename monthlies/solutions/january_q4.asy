@@ -14,11 +14,11 @@ for (int y = 0; y < rows; ++y) {
 
 pen lines = linewidth(1pt);
 
-for (int y = 0; y <= rows ; ++y) {
+for (int y = 0; y <= rows; ++y) {
     draw((0, y) -- (columns + 0.5, y), lines);
 }
 
-for (int x = 0; x <= rows ; ++x) {
+for (int x = 0; x <= columns; ++x) {
     draw((x, 0) -- (x, rows + 0.5), lines);
 }
 
