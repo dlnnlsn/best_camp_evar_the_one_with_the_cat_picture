@@ -101,7 +101,7 @@ in ascending order at the bottom of the deck. This clearly implies the desired
 result.
 
 The claim is vacuously true for $k = 0$. Now suppose that we have the cards from
-$1$ to $k$ in ascending order at the botton of the deck. Repeatedly draw two
+$1$ to $k$ in ascending order at the bottom of the deck. Repeatedly draw two
 cards, and place either one at the bottom of the deck, until one of the two
 cards that we draw is $(k + 1)$. At this point, place $(k + 1)$ at the top of
 the deck, and the other card on the bottom. Now repeatedly draw two cards, and
@@ -123,7 +123,7 @@ $1$ to $(k + 1)$ at the bottom of the deck in ascending order as desired.
 Note that
 \[
     (x^2 - 4x + 7)(x^2 + 4x + 7) = (x^2 + 7)^2 - 16x^2 = x^4 - 2x^2 + 49 = (x^2
-    - 1) + 48.
+    - 1)^2 + 48.
 \]
 
 Similarly,
@@ -185,11 +185,44 @@ Thus the only solution to the given system of equations is given by $(x, y, z) =
 %Determine the number of sets $A = \{a_1,a_2,\ldots, a_{1000}\}$ of positive integers satisfying $a_1 < a_2 < \dotsb < a_{1000} \le 2014$ for which the set
 %	\[ S = \{a_i+a_j \mid 1\le i,j\le 1000,\ i+j\in A\} \]
 %is a subset of $A$.
+We will first show that there is no $k \leq 1000$ such that $1000 < a_k \leq
+2000$. Suppose that $a_k = 1000 + m$ where $1 \leq m \leq 1000$. Then we have
+that $1000 + m = a_k \in A$, and so $a_{1000} + a_m \in A$. But $a_{1000} + a_m
+> a_{1000}$, which is a contradiction since $a_{1000}$ is the largest element of
+$A$.
+
+Note that at most $14$ elements of $A$ can be elements of $\{2001, 2002, \dots,
+2014\}$, and so at least $1000 - 14 = 986$ are at most $1000$.
+
+Let $k$ be the largest natural number such that $a_k \leq 1000$. Our previous
+observation gives us that $k \geq 986$, and so $1000 - k \leq 14$. We claim
+that $a_k = k$. Clearly we have that $a_k \geq k$ since the sequence is
+increasing. Suppose that $a_k > k$. Let $a_k = k + m$ where $1 \leq m \leq 1000
+- k \leq 14$. Since $k + m = a_k \in A$, we have that $a_k + a_m \in A$. But $m
+\leq 14 < k$, so $a_m < a_k \leq 1000$, and thus $a_k + a_m < 1000 + 1000 =
+2000$. Thus we must have that $a_k + a_m \leq 1000$, and so $a_k + a_m \leq
+a_k$, a contradiction. Thus $a_k = k$, and so $a_i = i$ for all $i < k$.
+
+Thus the set $A$ must be of the form
+\[
+    \{1, 2, 3, \dots, k\} \cup B  
+\]
+where $k = 1000 - |B|$, and $B$ is some subset of $\{2001, 2002, \dots, 2014\}$.
+
+We claim that all sets of this form do satisfy the condition in the problem.
+Suppose that $A$ is of the given form, and that $i$ and $j$ are such that $1
+\leq i, j \leq 1000$, and $i + j \in A$. Since $i + j \leq 2000$, we must have
+that $i + j \leq k$. Thus $i \leq k$ and $j \leq k$, and so $a_i = i$ and $a_j =
+j$. Thus $a_i + a_j = i + j \in A$, as required.
+
+It follows that the number of sets $A$ which satisfy the condition in the
+problem is equal to the number of subsets of $\{2001, 2002, \dots, 2014\}$,
+which is equal to $2^{14}$.
 
 
 \item % SW-2011-4
 %Determine the largest integer $C$ such that the inequality \[ (x_1^2+200) +(x_2^2+200) +\dotsb +(x_k^2+200) \geq C \] holds for all positive integers $k$ and all $k$-tuples $(x_1,x_2,\dotsc,x_k)$ of positive integers such that $x_1+x_2+\dotsb+x_k = 100$.
-By [instert your favourite inequality here], we know that
+By [insert your favourite inequality here], we know that
 \[
     k(x_1^2 + x_2^2 + \dots + x_k^2) \geq (x_1 + x_2 + \dots + x_k)^2 = 10000.
 \]
@@ -233,7 +266,7 @@ We make use of directed line segments.
 
 Since $A$ and $B$ are an equal distance from $O$, they have equal power with
 respect to $\omega_1$, and so we have that $AP \times AQ = BP \times BQ$.
-Simllarly, since $A$ and $C$ are an equal distance from $O$, they have equal
+Similarly, since $A$ and $C$ are an equal distance from $O$, they have equal
 power with respect to $\omega_2$, and so we have that $AR \times AS = CS \times
 CR$.
 
