@@ -326,6 +326,36 @@ of $\Gamma_1$ and $\Gamma_2$, which is a line that does not depend on $P$.
 
 \item % Med-Hard? Dutch IMO Selection 2016
 %Let $k$ be a positive integer, and let $s(n)$ denote the sum of the digits of $n$. Show that among all positive integers with $k$ digits, there are as many numbers $n$ satisfying $s(n) < s(2n)$ as there are numbers $n$ satisfying $s(n) > s(2n)$.
+Suppose that $n$ is a natural number with at most $k$ digits. Let $m = 10^k - 1
+- n$, and note that $m$ is also a natural number with at most $k$ digits.
+
+Since there are no carries involved in the substraction $10^k - 1 - n$, we have
+that $s(m) = s(10^k - 1 - n) = s(10^k - 1) - s(n) = 9k - s(n)$. (This is because
+each digit in $10^k - 1 - n$ is just the difference of the corresponding digits
+in $10^k - 1$ and in $n$.)
+
+Similarly, since there are no carries involved in the subtraction $2(10^k - 1) -
+2n$, we have that $s(2m) = s(2(10^k - 1) - 2n) = s(2(10^k - 1)) - s(2n) = 9k -
+s(2n)$.
+
+We thus have that $s(m) - s(2m) = -(s(n) - s(2n))$, and so $s(n) < s(2n)$ if and
+only if $s(m) > s(2m)$, and $s(n) > s(2n)$ if and only if $s(m) < s(2m)$.
+
+We see that there is a bijection between the set of natural numbers $n$ with at
+most $k$ digits such that $s(n) < s(2n)$, and the set of natural numbers $n$
+with at most $k$ digits such that $s(n) > s(2n)$.
+
+We now claim that, in fact, there is an equal number of natural numbers $n$ with
+\emph{exactly} $k$ digits such that $s(n) < s(2n)$ as there are natural numbers
+$n$ with \emph{exactly} $k$ digits such that $s(n) > s(2n)$.
+
+Let $a(k)$ denote the number of natural numbers $n$ with at most $k$ digits such
+that $s(n) < s(2n)$ and let $b(k)$ denote the number of natural numbers $n$ with
+at most $k$ digits such that $s(n) > s(2n)$. Then the number of natural numbers
+with exactly $k$ digits such that $s(n) < s(2n)$ is $a(k) - a(k-1)$. Similarly,
+the number of natural numbers $n$ with exactly $k$ digits such that $s(n) >
+s(2n)$ is $b(k) = b(k - 1)$. But $a(k) = b(k)$ and $a(k - 1) = b(k - 1)$, and so
+these quantities are equal, as claimed.
 
 \end{enumerate}
 
