@@ -90,7 +90,31 @@ an odd prime number.
 %Let $n > 1$ be an integer. Prove that the inequality
 %\[ \frac{(n-1)^2}{4} \geq \left(\sum_{1 \leq i < j \leq n} \sqrt{x_i x_j}\right)^2 + \left(\sum_{1 \leq i < j \leq n} \left\lvert x_i-x_j \right\rvert \right)^2 \]
 %holds for all nonnegative real numbers $x_1, x_2, \dotsc, x_n$ with $x_1 +x_2 +\dotsb +x_n = 1$.
+We have that
+\begin{align*}
+    (n - 1)^2 & - 4 \left(\sum_{1 \leq i < j \leq n} \sqrt{x_i x_j} \right)^2 
+     = \left( (n - 1) \sum_{1 \leq i \leq n} x_i \right)^2 - 4 \left(\sum_{1
+    \leq i < j \leq n} \sqrt{x_i x_j} \right)^2 \\
+    & = \left( (n - 1) \sum_{1 \leq i \leq n} x_i - 2 \sum_{1 \leq i < j \leq n}
+    \sqrt{x_i x_j} \right) \left( \ (n - 1) \sum_{1 \leq i \leq n} x_i + 2
+    \sum_{1 \leq i < j \leq n} \sqrt{x_i x_j} \right) \\
+    & = \left( \sum_{1 \leq i < j \leq n} (\sqrt{x_i} - \sqrt{x_j})^2 \right)
+        \left( \sum_{1 \leq i < j \leq n} (\sqrt{x_i} + \sqrt{x_j})^2 \right).
+\end{align*}
 
+By the Cauchy-Schwarz inequality, this is greater than or equal to
+\[
+    \left( \sum_{1 \leq i < j \leq n} | \sqrt{x_i} - \sqrt{x_j} | | \sqrt{x_i} +
+    \sqrt{x_j} | \right)^2 = \left( \sum_{1 \leq i < j \leq n} | x_i - x_j |
+    \right)^2,
+\]
+and thus we have that
+\[
+    \frac{(n - 1)^2}{4} \geq \left( \sum_{1 \leq i < j \leq n} \sqrt{x_i x_j}
+    \right)^2 + \frac{1}{4} \left( \sum_{1 \leq i < j \leq n} |x_i - x_j|
+    \right)^2,
+\]
+as desired.
 
 \item % Hard (Med-Hard?) Dutch BxMO Selection Test 2016
 %$\triangle ABC$ is right-angled with $\angle A=90^\circ$ and circumcircle $\Gamma$. The incircle of $\triangle ABC$ touches $BC$ at $D$, $CA$ at $E$ and $AB$ at $F$. Let $M$ be the midpoint of arc $AB$ of $\Gamma$ not containing $C$ and let $N$ be the midpoint of arc $AC$ of $\Gamma$ not containing $B$. Prove that $E$, $F$, $M$ and $N$ lie on a straight line.
