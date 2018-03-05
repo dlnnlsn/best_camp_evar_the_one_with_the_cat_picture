@@ -84,7 +84,28 @@ an odd prime number.
 
 \item % Argentine National Olympiad 2016 1st Level Q2 -- C, Q4
 %Given 100 infinitely large boxes with finitely many markers in each of them, the following procedure is carried out: At step 1 one adds one marker in every box. At step 2 one marker is added in every box containing an even number of markers. At step 3 one marker is added in every box in which the number of markers is divisible by 3, and so on. Before the process starts Bruno wants to distribute several markers in the boxes such that there is at least one marker in each box and the following holds: after any number of steps there exist two boxes containing a different number of markers. Is it possible for Bruno to do this?
+Consider an arbitrary box, and let $f(n)$ be the number of markers in the box at
+the start of the $n^\text{th}$ step. (Before a marker is potentially added on
+that step.) Since we never remove a marker from the box, $f$ is non-decreasing.
 
+We claim that $f(n) \geq n$ for all $n$. This is true for $n = 1$ since there is
+initially at least one marker in each box. Suppose that $f(n) \geq n$ for some
+$n$. If $f(n) = n$, then we add a marker to the box on the $n^\text{th}$ step,
+and so $f(n + 1) = n + 1$. Otherwise, we have that $f(n + 1) \geq f(n) \geq n +
+1$. The claim follows by induction. It follows that $f(n)$ is unbounded.
+
+Let $p$ be a prime number larger than $f(1)$. Since $f(n)$ is unbounded, and $f$
+increases by at most $1$ on each step, there is some $m$ such that $f(m) = p$.
+Since $p$ is not divisible by any of the numbers $m, m + 1, \dots, p - 1$, we
+see that we do not add any markers to the box until the $p^\text{th}$ step, and
+so $f(m) = f(m + 1) = \dots = f(p) = p$. It is then easy to see that $f(n) = n$
+for all $n \geq p$.
+
+For each of the 100 boxes, we thus have that eventually the number of markers
+in the box is equal to the number of the step that we are on. It follows that,
+regardless of the initial distribution of the markers, there will
+eventually be the same number of markers in each box, and so Bruno can not
+achieve his goal.
 
 \item % SW-2009-6
 %Let $n > 1$ be an integer. Prove that the inequality
