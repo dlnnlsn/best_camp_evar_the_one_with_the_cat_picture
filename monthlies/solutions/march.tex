@@ -259,6 +259,31 @@ and so $F$ also lies on $MN$.
 %Let $m,n$ be positive integers and $p > 3$ a prime number such that $\gcd(m,p-1) = \gcd(n,p-1) = 1$, and assume that $(a^m + b^m)^n \equiv (a^n + b^n)^m \pmod{p}$ for all integers $a$ and $b$.
 %
 %Prove that $m \equiv n \pmod{p-1}$.
+We will show by induction on $k$ that $k^m \equiv k^n \pmod{p}$ for all natural
+numbers $k$.
+
+This is clearly true for $k = 1$. Suppose that $k^m \equiv k^n \pmod{p}$ for
+some $k$.
+
+Since $\gcd(m, p - 1) = 1$, there is some natural number $s$ such that $ms
+\equiv 1 \pmod{p - 1}$. We then have that $k^{ms} \equiv k \pmod{p}$. Let $a =
+k^s$ and $b = 1$. Since $(a^m + b^m)^n \equiv (a^n + b^n)^m \pmod{p}$, we have
+that
+\[
+    (k^{ms} + 1)^n \equiv (k^{ns} + 1)^m \pmod{p}.
+\]
+
+But we know that $k^{ms} \equiv k \pmod{p}$, and also that $k^{ns} \equiv
+(k^n)^s \equiv (k^m)^s \equiv k^{ms} \equiv k \pmod{p}$ since $k^m \equiv k^n
+\pmod{p}$ by the induction hypothesis. We thus have that
+\[
+    (k + 1)^n \equiv (k + 1)^m \pmod{p},
+\]
+as desired.
+
+Since $k^m \equiv k^n \pmod{p}$ holds for all $k$, it also holds when $k$ is a
+primitive root of $p$, which immediately gives us that $m \equiv n \pmod{p -
+1}$, as requried.
 
 
 \end{enumerate}
