@@ -62,7 +62,7 @@ an odd prime number.
 %$ABCD$ is a square. At $B$, another square $BEFG$ is drawn so that $\angle ABE$ is obtuse. Prove that the median through $B$ of triangle $BCG$ is perpendicular to $AE$.
 Let $M$ be the midpoint of $CG$. Let $\Gamma_1$ be the circle with centre $A$
 and radius $AB$, and $\Gamma_2$ be the circle with centre $E$ and radius $EB$.
-Since $AE$ is the line between the entre of these two circles, it is enough to
+Since $AE$ is the line between the centre of these two circles, it is enough to
 show that $MB$ is the radical axis of $\Gamma_1$ and $\Gamma_2$. The point $B$
 lies on both circles, so we just need to show that $M$ has equal power with
 respect to each circle. Thus we wish to show that $MA^2 - AB^2 = ME^2 - EB^2$.
@@ -119,7 +119,63 @@ $3$.
 %Determine all pairs of functions $(f,g)$ from the set of real numbers to itself such that
 %\[ \min(f(x),f(y)) = \max(g(x),g(y)) \]
 %for all real numbers $x$ and $y$ with $x \neq y$.
+We claim that $f$ is bounded below. Suppose not. Then there is some $x$ such
+that $f(x) < \min\{f(0), g(0) \}$. Since $f(x) < f(0)$, we have that $x \neq 0$,
+and so
+\[
+    f(x) = \min\{ f(x), f(0) \} = \max\{ g(x), g(0) \} \geq g(0),
+\]
+a contradiction. Let $c$ be the greatest lower bound of the values of $f$.
 
+A similar argument shows that $g$ is bounded above. Let $d$ be the least upper
+bound of the values of $g$. We will show that $c = d$.
+
+For any $x \neq y$, we have that
+\[
+    c \leq \min\{ f(x), f(y) \} = \max\{ g(x), g(y) \} \leq d.   
+\]
+
+Thus $c \leq d$. Suppose that $c < d$. Since $c$ is the greatest lower bound of
+the values of $f$, we have that $d$ is not a lower bound, and so there is some
+$x$ such that $c \leq f(x) < d$. Similarly, since $f(x)$ is not an upper bound
+for the values of $g$, there is some $y$ such that $f(x) < g(y) \leq d$. We then
+have that
+\[
+    f(x) \geq \min\{ f(x), f(y) \} = \max\{ g(x), g(y) \} \geq g(y) > f(x),
+\]
+a contradiction. Thus we have that $c = d$.
+
+Now suppose that $x \neq y$ are such that $f(x) > c$ and $f(y) > c$. The we have
+that
+\[
+    c < \min\{ f(x), f(y) \} = \max\{ g(x), g(y) \} \leq d = c,
+\]
+a contradiction. It follows that there is at most one value of $x$ such that
+$f(x) > c$. Similarly, there is at most one value of $y$ such that $g(y) < c$.
+All solutions are thus of the form $(f, g)$ where
+\[
+    f(x) = \begin{cases} c_0 & \text{if } x \neq d_0 \\
+        c_1 & \text{if } x = d_0
+    \end{cases}
+    \quad \text{and} \quad
+    g(x) = \begin{cases} c_0 & \text{if } x \neq d_1 \\
+        c_2 & \text{if } x = d_1
+    \end{cases}
+\]
+for some constants $c_0, c_1, c_2, d_0$ and $d_1$ such that $c_1 \geq c_0$ and
+$c_2 \leq c_0$.
+
+We now check that all such pairs of functions do satisfy the conditions in the
+problem. Suppose that $f$ and $g$ are as defined above. Consider any real
+numbers $x \neq y$. Since $x \neq y$, we can not have that $x = y = d_0$, and so
+either $f(x) = c_0$ or $f(y) = c_0$. Since $c_0 \leq c_1$, this implies that
+$\min\{ f(x), f(y) \} = c_0$.
+
+Similarly, we have that $\max\{ g(x), g(y) \} = c_0$. We thus have that
+\[
+    \min\{ f(x), f(y) \} = c_0 = \max\{ g(x), g(y) \},
+\]
+as required.
 
 \item % Argentine National Olympiad 2016 1st Level Q2 -- C, Q4
 %Given 100 infinitely large boxes with finitely many markers in each of them, the following procedure is carried out: At step 1 one adds one marker in every box. At step 2 one marker is added in every box containing an even number of markers. At step 3 one marker is added in every box in which the number of markers is divisible by 3, and so on. Before the process starts Bruno wants to distribute several markers in the boxes such that there is at least one marker in each box and the following holds: after any number of steps there exist two boxes containing a different number of markers. Is it possible for Bruno to do this?
