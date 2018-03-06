@@ -147,7 +147,21 @@ as desired.
 
 \item % Hard (Med-Hard?) Dutch BxMO Selection Test 2016
 %$\triangle ABC$ is right-angled with $\angle A=90^\circ$ and circumcircle $\Gamma$. The incircle of $\triangle ABC$ touches $BC$ at $D$, $CA$ at $E$ and $AB$ at $F$. Let $M$ be the midpoint of arc $AB$ of $\Gamma$ not containing $C$ and let $N$ be the midpoint of arc $AC$ of $\Gamma$ not containing $B$. Prove that $E$, $F$, $M$ and $N$ lie on a straight line.
+Let $I$ be the incentre of $\triangle ABC$. Note that $M$ is the intersection of
+$CI$ with $\Gamma$, and $N$ is the intersection of $BI$ with $\Gamma$. Since
+$BC$ is a diameter of $\Gamma$, we have that $\angle INC = \angle BNC = \angle
+BMC = \angle BMI = 90^\circ$. Radii are perpendicular to tangents, and so we
+have that $\angle IEC = \angle BFI = 90^\circ$. We see that $IENC$ and $BMFI$
+are cyclic. It follows that $\angle ENB = \angle ENI = \angle ECI = \angle ICB =
+\angle MCB = \angle MNB$, and so $E$ lies on $MN$. Similarly, we have that
+$\angle CMF = \angle IMF = \angle IBF = \angle CBI = \angle CBN = \angle CMN$,
+and so $F$ also lies on $MN$.
 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{march_q7.png}
+\caption{Problem 7}
+\end{figure}
 
 \item % JM-2007-4
 %Let $m,n$ be positive integers and $p > 3$ a prime number such that $\gcd(m,p-1) = \gcd(n,p-1) = 1$, and assume that $(a^m + b^m)^n \equiv (a^n + b^n)^m \pmod{p}$ for all integers $a$ and $b$.
