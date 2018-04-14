@@ -60,38 +60,20 @@ an odd prime number.
 
 \item % PP-2005-3
 %$ABCD$ is a square. At $B$, another square $BEFG$ is drawn so that $\angle ABE$ is obtuse. Prove that the median through $B$ of triangle $BCG$ is perpendicular to $AE$.
-Let $M$ be the midpoint of $CG$. Let $\Gamma_1$ be the circle with centre $A$
-and radius $AB$, and $\Gamma_2$ be the circle with centre $E$ and radius $EB$.
-Since $AE$ is the line between the entre of these two circles, it is enough to
-show that $MB$ is the radical axis of $\Gamma_1$ and $\Gamma_2$. The point $B$
-lies on both circles, so we just need to show that $M$ has equal power with
-respect to each circle. Thus we wish to show that $MA^2 - AB^2 = ME^2 - EB^2$.
-
-By the cosine law in triangles $\triangle MAB$ and $\triangle MEB$, we have that
-\[
-    MA^2 - AB^2 = MB^2 - 2 AB \cdot MB \cos(\angle MBA),
-\]
-and
-\[
-    ME^2 - EB^2 = MB^2 - 2 EB \cdot MB \cos(\angle EBM).
-\]
-
-It is thus enough to show that $AB \cos(\angle MBA) = EB \cos(\angle EBM)$. Now
-note that $\cos(\angle MBA) = \cos(90^\circ + \angle MBC) = -\sin(\angle MBC)$,
-and, similarly, $\cos(\angle EBM) = -\sin(\angle GBM)$. Thus we wish to show
-that $AB \sin(\angle MBC) = EB \sin(\angle GBM)$. Since $AB = BC$, and $EB =
-BG$, this is equivalent to $BC \sin(\angle MBC) = BG \sin(\angle GBM)$
-
-The sine law in triangles $\triangle BGM$ and $\triangle BMC$ gives us that $BC
-\sin(\angle MBC) = MC \sin(\angle CMB)$, and $BG \sin(\angle GBM) = GM
-\sin(\angle BMG)$. Since $GM = MC$ and $\sin(\angle CMB) = \sin(\angle BMG)$,
-the result follows.
+Let $A$, $B$, $C$, and $D$ be the points $(-1, 0)$, $(0, 0)$, $(0, 1)$, and
+$(-1, 1)$ respectively. Let $E$ be the point $(e_x, e_y)$. Then $G$ is the 
+point $(-e_y, e_x)$. We then  have that the midpoint of $CG$ is the point
+$\frac{1}{2} (- e_y, 1 + e_x)$. Thus the slope of the median through $B$ of
+triangle $BCG$ is $-\frac{1 + e_x}{e_y}$. The slope of the line $AE$ is
+$\frac{e_y}{e_x + 1}$. The product of the slopes of these lines is therefore
+$-1$, and so the lines are perpendicular.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.8\textwidth]{march_q2.png}
+\includegraphics[width=0.8\textwidth]{march_q2.mps}
 \caption{Problem 2}
 \end{figure}
+
 
 \item % PP-2006-3
 %A hexagon can be partitioned into triangles, each coloured either black or white, such that:
