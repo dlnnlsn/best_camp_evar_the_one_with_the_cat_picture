@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsfonts}
+\usepackage[cm]{fullpage}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\pagenumbering{gobble}
+
+\title{April Monthly Problem Set Solution}
+\author{\vspace{-24pt}}
+\date{\vspace{-24pt}}
+
+
+\begin{document} \maketitle \pagestyle{empty}
+
+\begin{enumerate}
+
+\item % DB-2012-11
+%For integers $x$ and $y$, prove that the last two digits of $31x+73y$ are 18 if and only if the last two digits of $33x+39y$ are 74.
+
+
+\item % PP-2005-6
+%$ABCD$ is a rectangle, with points $X$ and $Y$ on sides $AB$ and $BC$ respectively. If the areas of triangles $AXD$, $XBY$ and $YCD$ are $a$, $b$ and $c$, respectively, determine the area of triangle $DXY$ in terms of $a$, $b$ and $c$.
+
+
+\item % DB-2012-6
+%In how many ways can you place 16 rooks on a chessboard such that each row contains exactly 2 rooks and each column contains exactly 2 rooks?
+
+
+\item % Liam & Dylan
+%Let $(F_n)_{n=1}^\infty$ be a sequence of real numbers such that $F_1 = 1$, $F_2 = 3$ and \[F_{n+1} = \sqrt{F_{n}F_{n+2} +(-1)^{n+1} \cdot 5} \qquad \textrm{for all}\quad n\in\mathbb{N}.\] Prove that $F_n$ is an integer for all $n\in\mathbb{N}$.
+
+
+\item % JM-2011-1
+%Show that $\displaystyle \frac{a}{b} +\frac{b}{a} +\frac{c}{d} +\frac{d}{c}$ assumes infinitely many integer values for positive integers $a,b,c,d$ such that $a$ and $b$ have no common divisors and $c$ and $d$ have no common divisors.
+
+
+\item % SW-2013-6
+%Let a set $S = \{x_1,x_2,\dotsc,x_n\}$ of $n \geq 4$ real numbers be given. A subset $T = \{x_i,x_j,x_k,x_l\}$ of four distinct elements is called \emph{strange} if the sum of the smallest and the largest elements in $T$ is equal to the sum of the other two. What is the maximum number of strange subsets of $S$?
+
+
+\item % April Camp 1997 Test 5 Q3
+%Let $\mathbb{Q}[x]$ denote the set of all polynomials with rational coefficients. Let $f(x) \in \mathbb{Q}[x]$ and let $h(x) = x^3-3x+1$. Suppose $\alpha \in \mathbb{R}$ and $h(\alpha) =h(f(\alpha)) =0$.
+%\begin{enumerate}[label=(\alph*)]
+%\item Show that $h(x)$ cannot be written as the product of two nonconstant polynomials in $\mathbb{Q}[x]$.
+%\item Show that $\alpha$ is not a root of any quadratic polynomial in $\mathbb{Q}[x]$.
+%\item Hence, or otherwise, show that $h(f^n(\alpha)) = 0$ for all $n \in \mathbb{N}$.
+%\end{enumerate}
+
+\begin{enumerate}[label=(\alph*)]
+
+\item The intermediate value theorem confirms that $h$ has three real 
+roots. By the rational root test, the only possible rational roots 
+of $h(x)$ are $\pm 1$, but they are not. Hence $\alpha, \ f(\alpha)$ and 
+the third root of $h(x)$ are all irrational; and $h(x)$ is irreducible 
+in $\mathbb{Q} [x]$.
+
+\item Suppose for a contradiction that $\alpha$ is a root of a quadratic 
+$g(x) \in \mathbb{Q} [x]$. Then we can write
+$$
+h(x) = g(x) \cdot q(x) + r(x)
+$$
+with $r(x)$ a linear member of $\mathbb{Q} [x]$. Then 
+$$
+0 = h(\alpha) = g(\alpha) \cdot q(\alpha) + r(\alpha) = r(\alpha)
+$$
+and so $r(\alpha) = 0$. Since $r(x) \in \mathbb{Q} [x]$ and $\alpha$ is irrational, 
+we must have that $r$ is constantly 0. Thus $h(x) = g(x) \cdot q(x)$, 
+a contradiction to the irreducibility of $h(x)$.
+
+{\bf{Alternative:}}\\
+If $\alpha$ is the root of a quadratic, then we can write
+$\alpha = r + \sqrt{s}$ where $r, \ s \in \mathbb{Q}$ and $s$ is not a
+perfect square. The other root of the quadratic, $r - \sqrt{s}$,
+will be denoted $\overline{\alpha}$.
+
+We argue that both $\alpha$ and $\overline{\alpha}$ are roots of $h$.
+For this, note that since $(r + \sqrt{s})^3 - 3(r + \sqrt{s}) +1 = 0$,
+we have (by separating rational and irrational parts) that
+$r^3 + 3rs - 3r +1 = 0$ and $3r^2 + s - 3 = 0$. It follows that
+$(r - \sqrt{s})^3 - 3(r - \sqrt{s}) +1 = 0$.\footnote{
+All we have done here is reinvent a little of the theory of conjugate
+surds. The conjugate surd of a number of the form $ \alpha = r + \sqrt{s}$,
+where $r, \ s \in \mathbb{Q}$ and $s$ is not a perfect square, is
+defined to be $\overline{\alpha} = r - \sqrt{s}$. Given any polynomial
+$p(x) \in \mathbb{Q}[x]$, if $p(\alpha) = 0$, then $p(\overline{\alpha}) = 0$.
+
+This is quite similar to the well known fact that the complex roots of
+a polynomial with real coefficients occur in complex conjugate pairs.}
+
+This gives a contradiction, because it follows that the quadratic
+is a divisor of $h$. 
+
+\item Suppose inductively that $h(f^n(\alpha)) = 0$. We show that $h(x)$ is a 
+factor of $h(f^n(x))$. We can write
+$$
+h(f^n(x)) = h(x) \cdot s(x) + g(x)
+$$
+with $s(x), \ g(x)$ members of $\mathbb{Q} [x]$ with the degree of $g(x)$ less 
+than or equal to 2. Then 
+$$
+0 = h(f^n(\alpha)) = h(\alpha) \cdot s(\alpha) + g(\alpha)
+$$
+and so $g(\alpha) = 0$. From the previous paragraph $g$ then cannot be 
+a quadratic, and clearly cannot be linear, and so we get that $g$ is 
+constantly 0.
+
+Hence $h(f^n(x)) = h(x) \cdot s(x)$, and so by substitution 
+$h(f^{n+1}(x)) = h(f(x)) \cdot s(f(x))$. Thus 
+$h(f^{n+1}(\alpha)) = h(f(\alpha)) \cdot s(f(\alpha)) = 0$, completing 
+the inductive step.
+
+\end{enumerate}
+
+\item % DB&JM-2013-1
+%Let $ABC$ be a triangle with incentre $I$, and let the incircle and side $BC$ intersect at $D$. Prove that $\sin(\angle IAD) < 1/3$.
+
+\end{enumerate}
+
+\end{document}
