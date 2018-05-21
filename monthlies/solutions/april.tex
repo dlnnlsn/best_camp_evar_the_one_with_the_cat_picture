@@ -17,7 +17,10 @@
 
 \item % DB-2012-11
 %For integers $x$ and $y$, prove that the last two digits of $31x+73y$ are 18 if and only if the last two digits of $33x+39y$ are 74.
-
+Since $43$ is relatively prime to $100$, we have that $31x + 73y \equiv 18
+\pmod{100}$ is equivalent to $43(31x + 73y) \equiv 43 \cdot 18 \pmod{100}$,
+which is equivalent to $1333x + 3139y \equiv 774 \pmod{100}$,
+or---equivalently---$33x + 39y \equiv 74 \pmod{100}$.
 
 \item % PP-2005-6
 %$ABCD$ is a rectangle, with points $X$ and $Y$ on sides $AB$ and $BC$ respectively. If the areas of triangles $AXD$, $XBY$ and $YCD$ are $a$, $b$ and $c$, respectively, determine the area of triangle $DXY$ in terms of $a$, $b$ and $c$.
@@ -29,7 +32,23 @@
 
 \item % Liam & Dylan
 %Let $(F_n)_{n=1}^\infty$ be a sequence of real numbers such that $F_1 = 1$, $F_2 = 3$ and \[F_{n+1} = \sqrt{F_{n}F_{n+2} +(-1)^{n+1} \cdot 5} \qquad \textrm{for all}\quad n\in\mathbb{N}.\] Prove that $F_n$ is an integer for all $n\in\mathbb{N}$.
+The given condition gives us that $F_3 = 4$ and $F_4 = 7$. We claim that $F_{n +
+2} = F_{n + 1} + F_{n}$ for all natural numbers $n$. Suppose that $F_{n + 1} =
+F_{n} + F_{n - 1}$ and $F_n = F_{n - 1} + F_{n - 2}$ for some $n$. We then have
+that
+\begin{align*}
+  F_{n} F_{n + 2} & = F_{n + 1}^2 + {(-1)}^{n} \cdot 5 
+     = {\left(F_n + F_{n - 1}\right)}^2 + {(-1)}^{n} \cdot 5 \\
+     & = F_n^2 + 2 F_n F_{n-1} + F_{n - 1}^2 + {(-1)}^{n} \cdot 5 \\
+     & = F_n^2 + 2F_n F_{n-1} + F_{n - 2} F_n. 
+\end{align*}
 
+We thus have that
+\[
+    F_{n + 2} = F_n + 2F_{n - 1} + F_{n - 2} = (F_n + F_{n - 1}) + (F_{n - 1} +
+    F_{n - 2}) = F_{n + 1} + F_n,
+\]
+as claimed.
 
 \item % JM-2011-1
 %Show that $\displaystyle \frac{a}{b} +\frac{b}{a} +\frac{c}{d} +\frac{d}{c}$ assumes infinitely many integer values for positive integers $a,b,c,d$ such that $a$ and $b$ have no common divisors and $c$ and $d$ have no common divisors.
