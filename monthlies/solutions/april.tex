@@ -85,7 +85,46 @@ as claimed.
 
 \item % JM-2011-1
 %Show that $\displaystyle \frac{a}{b} +\frac{b}{a} +\frac{c}{d} +\frac{d}{c}$ assumes infinitely many integer values for positive integers $a,b,c,d$ such that $a$ and $b$ have no common divisors and $c$ and $d$ have no common divisors.
+Let $F_n$ be the $n^\text{th}$ Fibonacci number. Recall that $F_{2n+1} F_{2n -
+1} - F_{2n}^2 = 1.$
 
+This implies that
+\[
+  F_{2n + 1} \,\mid\, F_{2n}^2 + 1 \quad \implies \quad F_{2n + 1} \,\mid\,
+  F_{2n+1}^2 - 2 F_{2n + 1} F_{2n} + F_{2n}^2 + 1 
+\]
+\[
+  \implies \quad F_{2n +
+  1} \,\mid\, {\left( F_{2n+1} - F_{2n} \right)}^2 + 1 \quad \implies \quad
+  F_{2n + 1} \mid F_{2n - 1}^2 + 1.
+\]
+
+Similarly, we have that
+\[
+  F_{2n - 1} \,\mid\, F_{2n + 1}^2 + 1.
+\]
+
+We thus have that
+\[
+  \frac{(F_{2n + 1}^2 + 1)(F_{2n - 1}^2 + 1)}{F_{2n + 1} F_{2n - 1}}
+\]
+is an integer.
+
+This is equal to
+\[
+  F_{2n + 1} F_{2n - 1} + \frac{F_{2n - 1}}{F_{2n + 1}} + \frac{F_{2n + 1}F_{2n
+  - 1}} + \frac{1}{F_{2n - 1}F_{2n + 1}}.
+\]
+
+We thus have that if $a = F_{2n - 1}$, $b = F_{2n + 1}$, $c = 1$ and $d = F_{2n
+- 1} F_{2n + 1}$, then
+\[
+  \frac{a}{b} + \frac{b}{a} + \frac{c}{d} + \frac{d}{c}
+\]
+is an integer.
+
+Since $F_{2n - 1} F_{2n + 1}$ can be made arbitrarily large, the expression
+takes on arbitrarily large integer values.
 
 \item % SW-2013-6
 %Let a set $S = \{x_1,x_2,\dotsc,x_n\}$ of $n \geq 4$ real numbers be given. A subset $T = \{x_i,x_j,x_k,x_l\}$ of four distinct elements is called \emph{strange} if the sum of the smallest and the largest elements in $T$ is equal to the sum of the other two. What is the maximum number of strange subsets of $S$?
