@@ -24,7 +24,40 @@ or---equivalently---$33x + 39y \equiv 74 \pmod{100}$.
 
 \item % PP-2005-6
 %$ABCD$ is a rectangle, with points $X$ and $Y$ on sides $AB$ and $BC$ respectively. If the areas of triangles $AXD$, $XBY$ and $YCD$ are $a$, $b$ and $c$, respectively, determine the area of triangle $DXY$ in terms of $a$, $b$ and $c$.
+Let $AX = x$, $XB = y$, $BY = z$ and $YC = w$. Then we have that
+\begin{align*}
+  x(z + w) & = 2a & yz & = 2b & w(x + y) & = 2c.
+\end{align*}
+We note that
+\[
+  (x + y)(z + w) = x(z + w) + yz + w(x + y) - wx = 2(a + b + c) - wx.
+\]
 
+We thus have that
+\[
+  4ac = wx(x + y)(z + w) = wx(2(a + b + c) - wx)
+\]
+and so
+\[
+  {(wx)}^2 - 2(a + b + c)wx + 4ac = 0.
+\]
+
+The quadratic formula gives us that
+\begin{align*}
+  wx & = a + b + c + \sqrt{{(a + b + c)}^2 - 4ac} & \text{or} && wx & = a + b + c
+  - \sqrt{{(a + b + c)}^2 - 4ac}.
+\end{align*}
+
+We note that the area of $DXY$ is equal to
+\[
+  (x + y)(z + w) - a - b - c = 2(a + b + c) - wx - a - b - c = a + b + c - wx.
+\]
+
+Thus we have that $wx \leq a + b + c$, and so we have that $wx = a + b + c -
+\sqrt{{(a + b + c)}^2 - 4ac}$, giving us that the area of $DXY$ is
+\[
+    \sqrt{{(a + b + c)}^2 - 4ac}.
+\]
 
 \item % DB-2012-6
 %In how many ways can you place 16 rooks on a chessboard such that each row contains exactly 2 rooks and each column contains exactly 2 rooks?
